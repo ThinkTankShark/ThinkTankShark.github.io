@@ -9,6 +9,7 @@ body {
   margin: 0px;
   height: 75px;
   position: fixed;
+  display: inline-block;
   width: 100%;
   background-color: white;}
 
