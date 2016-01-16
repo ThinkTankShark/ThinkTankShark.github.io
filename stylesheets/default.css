@@ -1,0 +1,128 @@
+/* Body Wrapper*/
+body {
+  padding: 0px;
+  margin: 0px;}
+
+/* Header Section */
+.header-container {
+  padding: 0px;
+  margin: 0px;
+  height: 75px;
+  position: fixed;
+  width: 100%;
+  background-color: white;}
+
+#header {
+  width: 100%
+  background-color: white;
+  float: right;
+  padding: 0px 0px 5px 0px;
+  margin: 0px;}
+
+#home-button {
+  background-color: #e6e6e6;
+  border-bottom: 4px solid #69f0ae;
+  padding: 0px;
+  margin: 0px;}
+
+.button-header {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 80px;
+  height: 80px;
+  width: 90px;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;}
+
+div.button-header:hover {
+  background-color: #e6e6e6;
+  text-decoration: none;
+  color: black;
+  border-bottom: 4px solid #69f0ae;
+  padding: 0px;
+  margin: 0px;
+}
+
+.button-header div:hover {
+  border-bottom: 4px solid #69f0ae;}
+
+.button-header a:link {
+  text-decoration: none;
+  color: black;}
+.button-header a:visited { color: black;}
+
+/* Wallpaper Section*/
+.wallpaper-container {
+  width: 100%;
+  height: 100%;
+  padding-top: 9px;
+  margin: 0px 0px 0px 0px;}
+
+#wallpaper {
+  hegiht: 600px;
+  width: 100%;
+  padding-top: 75px;}
+
+#bottom-point {
+border-radius: 100%;
+width: 50px;
+height: 50px;
+background-color: #69f0ae;
+margin-left: 550px;
+position: absolute;
+margin-top: -120px;}
+
+#arrow {
+  text-align: center;
+  color: #1a237e;
+  text-align: middle;
+  font-size: 25px;
+  margin-top: 10px;}
+
+/* About Me Section*/
+.aboutme h1 {font-size: 6em;}
+
+.aboutme h4 {
+  font-size: 3em;
+  padding-bottom: 0 px;
+  margin-bottom: 0 auto;}
+
+.line-separator{
+height:1px;
+border-bottom: 1px solid #313030;
+width: 50%;
+margin: auto;}
+
+.aboutme {
+  text-align: center;}
+
+.table-container {
+  width:100%;
+  padding: 0px;
+  margin: 0px;}
+
+#div-container {
+width: 30%;
+text-align: center;
+margin: auto;}
+
+.sm-icons {
+  height: 100px;
+  width: 100px;}
+
+#div-container table tr {
+  padding: 5px 5px 5px 5px;
+}
+
+/* Blog Section*/
+#table-container {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  padding-top: 90px;}
+
+#blog1:before {
+  content:url('imgs/blog1.jpg');
+  display: block;
+}
