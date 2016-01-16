@@ -1,0 +1,70 @@
+/* You'll want to make the site responsive and nice looking here. Have fun!*/
+
+html {
+  background: url(http://garudagloves.com/wp-content/uploads/2015/09/light-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 97.9166667%;
+  color:black;
+  background-attachment: fixed;
+}
+
+#side-a ul{
+  list-style-type:none;
+}
+
+a {
+  color:#f55251;
+  font-size: 1.6em;
+}
+#container {
+  text-align: center;
+
+}
+#header {
+  background: black;
+  color: white;
+  width: 68%;
+  font-size: 2em;
+}
+
+#side-a {
+  float: left;
+  width: 68%;
+}
+
+#side-a li{
+  display: inline-block;
+}
+
+#side-b {
+  float: right;
+  width: 15.625%;
+}
+
+#content {
+  float: left;
+  width: 68%;
+}
+
+#content img {
+  text-align: center;
+  width: 97.9166667%;
+}
+
+#content p { line-height: 40px; color: #444444; font-size: 1.5em; text-align: center; }
+
+#footer {
+  clear: both;
+  background: black;
+  color: white;
+  width: 68%;
+  font-size: 2em;
+  text-align: center;
+}
