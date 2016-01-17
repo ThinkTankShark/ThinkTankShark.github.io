@@ -1,71 +1,119 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>My Website</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
-  </head>
-  <body>
-    <!-- This is going to be the header layout of website -->
-    <section class="header-container">
-      <div id="header">
-          <div id="home-button" class="button-header"><a href="#">Home</a></div>
-          <div class="button-header"><a href="#aboutme">About Me</a></div>
-          <div class="button-header"><a href="#">Portfolio</a></div>
-          <div class="button-header"><a href="#blogme">Blog</a></div>
-          <div class="button-header"><a href="#">Contact Me</a></div>
-      </div>
-    </section>
-    <!-- Up to here -->
-    <!-- Wallpaper section -->
-    <section class="wallpaper-container">
-        <img id="wallpaper" src="imgs/index-wallpaper.jpg" alt="Homepage header image"/>
-        <a href="#aboutme"><div id="bottom-point"><p id="arrow">&darr;</p></div></a>
-    </section>
-    <!--  up to here -->
-    <!-- About me section -->
-    <section class="aboutme">
-      <a id="aboutme">
-        <h1>I'm Sepand Assadi, Full-Stack Software Developer</h1>
-        <div class="line-separator"></div>
-        <h4>Sentences from "About me" section goes here</h4>
-    </a>
-    </section>
-    <section class="table-container">
-      <div id="div-container">
-        <table>
-          <tr>
-            <td><a href="https://www.facebook.com/sepand.sam.assadi" target="_blank"><img class="sm-icons" src="imgs/fb.jpg" alt="Facebook"/></a></td>
-            <td><a href="https://twitter.com/sepandassadi" target="_blank"><img class="sm-icons" src="imgs/twitter.jpg" alt="Twitter"/></a></td>
-            <td><a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img class="sm-icons" src="imgs/linkedin.jpg" alt="LinkedIn"/></a></td>
-            <td><a href="https://github.com/ThinkTankShark" target="_blank"><img class="sm-icons" src="imgs/github.jpg" alt="Github"/></a></td>
-          </tr>
-        </table>
-      </div>
-    </section>
-    <!-- up to here -->
-     <!-- Blog me section -->
-    <a id="blogme"></a>
-    <section id="table-container">
-      <table>
-        <tr>
-          <div class="figure">
-            <td><p>Benefits of using Version Control System (VCS)</p><a href="blog/git.html" target="_blank"><img class="scaled" src="imgs/blog1.png" alt="blog#1"/></a></td>
-          </div>
-          <div class="figure">
-            <td colspan="2" rowspan="1"><p>10 Hand-Picked Tutorials for Beginning Web Designers</p><a href="http://code.tutsplus.com/articles/10-hand-picked-tutorials-for-beginning-web-designers--net-9341" target="_blank"><img class="scaled" src="imgs/blog3.png" alt="blog #3"/></td>
 
-          </div>
-        </tr>
-        <tr>
-          <td><img src="imgs/blog2.jpg" alt="blog #2"></td>
-        </tr>
-        <tr>
-          <td><img src="imgs/blog4.jpg" alt="blog #4"></td>
-          <td><img src="imgs/blog5.jpg" alt="blog #5"></td>
-          <td><img src="imgs/blog6.jpg" alt="blog #6"></td>
-        </tr>
-      </table>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheets/default-temp.css">
+    <title>Sepand Assadi | SF, CA</title>
+</head>
+
+<body>
+    <section id="wrapper">
+        <section class="navbar">
+            <!-- Navigation Bar Section -->
+            <div id="nav-left">
+                <a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img src="imgs/logo.png" alt="Logo" /></a>
+            </div>
+            <div id="nav-right">
+                <a id="home-button" class="button-header" href="#">Home</a>
+                <a class="button-header" href="#aboutme">About Me</a>
+                <a class="button-header" href="#portfolio">Portfolio</a>
+                <a class="button-header" href="#">Blog</a>
+                <a class="button-header" href="#">Contact</a>
+            </div>
+        </section>
+        <section class="wallpaper">
+            <!-- Wallpaper Section -->
+            <h1 class="title">I'm <span id="h1"><p>Sepand Assadi</p></span>, Full-Stack Software Developer</h1>
+            <a href="#aboutme">
+                <div id="bottom-point">
+                    <p id="arrow">&darr;</p>
+                </div>
+            </a>
+        </section>
+        <section class="about-me">
+            <!-- About Me Section -->
+            <div>
+                <a id="aboutme">
+                    <div id="aboutme-title">
+                        <p>Software Engineer with hands-on experience in all levels of testing, including performance, functional, integration, system, regression, and user acceptance testing.
+                            <br>
+                            <br>Supportive and enthusiastic team player dedicated to streamlining processes and efficiently resolving project issues.</p>
+                    </div>
+                </a>
+                <div id="aboutme-picture">
+                    <img src="imgs/aboutme-pic.jpg" alt="About Me Picture" />
+                </div>
+            </div>
+            <div>
+                <div id="aboutme-education-left">
+                    <div class="aboutme-education-each">
+                        <a href="http://devbootcamp.com/" target="_blank"><img src="imgs/dbc.jpg" alt="DBC" /></a>
+                        <p>Full-Stack Coding Boot Camp</p>
+                    </div>
+                    <div class="aboutme-education-each">
+                        <a href="http://ww1.emu.edu.tr/en/" target="_blank"><img src="imgs/emu.png" alt="EMU" /></a>
+                        <p>Master of Business (M.B.A)</p>
+                    </div>
+                    <div class="aboutme-education-each">
+                        <a href="http://ww1.emu.edu.tr/en/" target="_blank"><img src="imgs/emu.png" alt="EMU" /></a>
+                        <p>BS in Information Technology (I.T)</p>
+                    </div>
+                    <div class="aboutme-education-each">
+                        <a href="http://web.mit.edu/" target="_blank"><img src="imgs/mit.gif" alt="MIT" /></a>
+                        <p>Certificate of Completion in Python</p>
+                    </div>
+                </div>
+                <div id="aboutme-education-right">
+                    <div>
+                        <a href="https://www.facebook.com/sepand.sam.assadi" target="_blank"><img class="sm-icons" src="imgs/fb.jpg" alt="Facebook" /></a>
+                    </div>
+                    <div>
+                        <a href="https://twitter.com/sepandassadi" target="_blank"><img class="sm-icons" src="imgs/twitter.jpg" alt="Twitter" /></a>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img class="sm-icons" src="imgs/linkedin.jpg" alt="LinkedIn" /></a>
+                    </div>
+                    <div>
+                        <a href="https://github.com/ThinkTankShark" target="_blank"><img class="sm-icons" src="imgs/github.jpg" alt="Github" /></a>
+                    </div>
+                    <div>
+                        <a href="mailto:info@sepandassadi.com?Subject=Reaching Out From Your Website"><img class="sm-icons" src="imgs/gmail.jpg" alt="Gmail" /></a>
+                    </div>
+                    <div>
+                        <form method="get" action="imgs/SepandAssadi-Resume.pdf">
+                            <button type="submit"> </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <!-- Portfolio Section -->
+            <div class="portfolio">
+                <a id="portfolio">
+                    <h1>Portfolio Under Construction</h1>
+                </a>
+            </div>
+        </section>
+        <section class="blog">
+            <!-- Blog Section -->
+        </section>
+        <section class="contact">
+            <!-- Blog Section -->
+            <script type="text/javascript" src="https://form.jotform.com/jsform/60163599545161"></script>
+        </section>
     </section>
-    <!-- up to here-->
-  </body>
+    <footer class="footer">
+        <!-- Footer Section -->
+        <a href="mailto:info@sepandassadi.com"><img src="imgs/footer/gmail-w.png" onmouseover="this.src='imgs/footer/gmail-c.png'" onmouseout="this.src='imgs/footer/gmail-w.png'" alt="email"></a>
+        <a href="https://www.facebook.com/sepand.sam.assadi"><img src="imgs/footer/fb-w.png" onmouseover="this.src='imgs/footer/fb-c.png'" onmouseout="this.src='imgs/footer/fb-w.png'" alt="facebook"></a>
+        <a href="https://www.linkedin.com/in/sepandassadi"><img src="imgs/footer/link-w.jpg" onmouseover="this.src='imgs/footer/link-c.png'" onmouseout="this.src='imgs/footer/link-w.jpg'" alt="linkedin"></a>
+        <a href="https://twitter.com/sepandassadi"><img src="imgs/footer/twitter-b.jpg" onmouseover="this.src='imgs/footer/twitter-c.png'" onmouseout="this.src='imgs/footer/twitter-b.jpg'" alt="twitter"></a>
+        <a href="https://plus.google.com/+SepandAssadi/posts"><img src="imgs/footer/google-w.jpg" onmouseover="this.src='imgs/footer/google-c.jpg'" onmouseout="this.src='imgs/footer/google-w.jpg'" alt="google+"></a>
+        <a href="https://www.instagram.com/sepand.assadi/"><img src="imgs/footer/insta-w.png" onmouseover="this.src='imgs/footer/insta-c.jpg'" onmouseout="this.src='imgs/footer/insta-w.png'" alt="google+"></a>
+        <p>Copyright© Sepand Assadi 2016</p>
+    </footer>
+</body>
+
 </html>

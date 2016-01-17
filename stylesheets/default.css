@@ -1,153 +1,261 @@
-/* Body Wrapper*/
-body {
-  padding: 0px;
-  margin: 0px;}
+/* Body Wrapper */
 
-/* Header Section */
-.header-container {
-  padding: 0px;
-  margin: 0px;
-  height: 75px;
-  position: fixed;
-  display: inline-block;
-  width: 100%;
-  background-color: white;}
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
 
-#header {
-  width: 100%
-  background-color: white;
-  float: right;
-  padding: 0px 0px 5px 0px;
-  margin: 0px;}
+#wrapper {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    float: top;
+    margin: -10px 0px 0px 0px;
+    background-color: white;
+    font-family: Open Sans;
+    position: fixed;
+    width: 100%;
+    text-transform: uppercase;
+    height: 74px;
+}
+
+#nav-left {
+    margin-top: -5px;
+    margin-left: 25px;
+    float: left;
+}
+
+#nav-left img {
+    height: 74px;
+    padding-top: 15px;
+}
+
+#nav-right {
+    float: right;
+    font-size: 1em;
+    margin-right: 25px;
+}
 
 #home-button {
-  background-color: #e6e6e6;
-  border-bottom: 4px solid #69f0ae;
-  padding: 0px;
-  margin: 0px;}
+    background-color: #e6e6e6;
+    border-bottom: 4px solid #69f0ae;
+}
 
 .button-header {
-  text-align: center;
-  vertical-align: middle;
-  line-height: 80px;
-  height: 80px;
-  width: 90px;
-  display: inline-block;
-  padding: 0px;
-  margin: 0px;}
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    width: 100px;
+    display: inline-block;
+}
 
-div.button-header:hover {
-  background-color: #e6e6e6;
-  text-decoration: none;
-  color: black;
-  border-bottom: 4px solid #69f0ae;
-  padding: 0px;
-  margin: 0px;
+div a {
+    text-decoration: none;
+    color: black;
+}
+
+.button-header:hover {
+    background-color: #e6e6e6;
+    text-decoration: none;
+    color: black;
+    border-bottom: 4px solid #69f0ae;
 }
 
 .button-header div:hover {
-  border-bottom: 4px solid #69f0ae;}
+    border-bottom: 4px solid #69f0ae;
+}
 
 .button-header a:link {
-  text-decoration: none;
-  color: black;}
-.button-header a:visited { color: black;}
+    text-decoration: none;
+    color: black;
+}
 
-/* Wallpaper Section*/
-.wallpaper-container {
-  width: 100%;
-  height: 100%;
-  padding-top: 9px;
-  margin: 0px 0px 0px 0px;}
+.button-header a:visited {
+    color: black;
+}
 
-#wallpaper {
-  hegiht: 600px;
-  width: 100%;
-  padding-top: 75px;}
+
+/* Wallpaper Section */
+
+.wallpaper {
+    background-image: url("../imgs/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 75px 0;
+    margin-bottom: 5px;
+}
+
+.title {
+    /* Changing the wallpaper h1 */
+    font-family: Open sans;
+    font-size: 3em;
+    color: white;
+    padding-top: 600px;
+}
+
+
+/*  Text Animation */
+
+span p {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 6.25em;
+    animation: type 3s steps(60, end);
+    display: inline-block;
+    margin-bottom: -15px;
+}
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    to {
+        opacity: .0;
+    }
+}
+
+
+/*  Arrow Pointer */
 
 #bottom-point {
-border-radius: 100%;
-width: 50px;
-height: 50px;
-background-color: #69f0ae;
-margin-left: 550px;
-position: absolute;
-margin-top: -120px;}
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    background-color: #69f0ae;
+    text-decoration: none;
+    margin-left: 48%;
+    margin-top: 10px;
+}
 
 #arrow {
-  text-align: center;
-  color: #1a237e;
-  text-align: middle;
-  font-size: 25px;
-  margin-top: 10px;}
+    text-align: center;
+    color: #1a237e;
+    text-align: middle;
+    font-size: 25px;
+    padding-top: 10px;
+}
 
-/* About Me Section*/
-.aboutme h1 {font-size: 6em;}
 
-.aboutme h4 {
-  font-size: 3em;
-  padding-bottom: 0px;
-  margin: 0.5em 0px 0.5em 0px;}
+/* About Me Section */
 
-.line-separator{
-height:1px;
-border-bottom: 1px solid #313030;
-width: 50%;
-margin: auto;}
+.about-me {
+    clear: both;
+    background-image: url("../imgs/wallpaper2.jpg");
+    position: relative;
+    height: 530px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+}
 
-.aboutme {
-  text-align: center;}
+#aboutme-title {
+    float: left;
+    width: 40%;
+    font-family: Open Sans;
+    font-size: 2em;
+    margin: auto;
+    padding: 5% 0 0 15%;
+    text-align: justify;
+}
 
-.table-container {
-  width:100%;
-  padding: 0px;
-  margin: 0px;}
+#aboutme-picture {
+    float: right;
+    padding: 5% 20% 0 0;
+}
 
-#div-container {
-width: 30%;
-text-align: center;
-margin: auto;}
+div img {
+    border-radius: 30%;
+    height: 300px;
+}
+
+#aboutme-education-left {
+    margin-top: 80px;
+    margin-left: 20%;
+    width: 50%;
+    float: left;
+}
+
+#aboutme-education-right {
+    float: right;
+    margin-top: 130px;
+    margin-right: 380px;
+}
+
+div button {
+    background: url("../imgs/button.jpg") no-repeat scroll 0 0 transparent;
+    height: 100px;
+    width: 100px;
+    font-size: 1.4em;
+    background-size: 100%;
+    border-radius: 40%;
+}
+
+.aboutme-education-each {}
+
+.aboutme-education-each p {
+    display: inline;
+    font-family: Open Sans;
+    font-size: 1.7em;
+    float: right;
+    padding: 70px 200px 0px 0px;
+}
+
+.aboutme-education-each img {
+    height: 130px;
+    width: 130px;
+    padding: 20px;
+    display: inline;
+}
 
 .sm-icons {
-  height: 100px;
-  width: 100px;}
-
-#div-container table tr {
-  padding: 5px 5px 5px 5px;
+    height: 100px;
+    width: 100px;
 }
 
-/* Blog Section*/
-#table-container {
-  text-align: center;
-  width: 80%;
-  margin: auto;
-  padding-top: auto;}
 
-.figure {
-  margin: 0.5px;
-  padding: 0.5em;
-  background-size: cover;
+/* Portfolio Section */
+
+.portfolio {
+    font-size: 4em;
+    padding: 30px 0;
+    margin: auto;
+    clear: both;
+    text-align: center;
 }
-img.scaled {
-  width: 100%;
+
+
+/* Footer Section */
+
+.footer {
+    background-color: White;
+    color: black;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 20px;
+    height: 40px;
+    margin-bottom: 30px;
+    font-family: Open Sans;
+    font-size: 0.8em;
 }
-div.figure p {
-  text-align: center;
-  font-style: italic;
-  text-indent: 0;
-  text-decoration: none;
-}
-/*div.figure {
-  margin: 0.5em;
-  padding: 0.5em;
-  border: 1px solid black;
-}
-div.figure p {
-  text-align: center;
-  font-style: italic;
-  text-indent: 0;
-  text-decoration: none;
-}
-img.scaled {
-  width: 100%;
-}*/
+
+
+/*  */
+/*  */
+/*  */
+/*  */
