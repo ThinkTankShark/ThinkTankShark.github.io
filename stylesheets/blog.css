@@ -1,14 +1,123 @@
-@import url("default.css");
+@import url("template.css");
 
-#table-container {
-  text-align: center;
-  margin-top: 0px;
-  padding-top: 90px;}
+/* Page Settings */
 
-.header-container {
-  margin-top: -10px;
-  padding-top: 0px;}
 
-.wrapper {
-  margin: 30px 30px 30px 30px;
-  padding-top: 85px;}
+/* Setting below will control the whole page */
+
+.page-wrapper {
+    font-family: Open Sans;
+}
+
+.blog-content-wrapper {
+    padding: 280px 20px 10px 100px;
+}
+
+
+/* Blog Section */
+
+
+/* This is going to be the blog title, name of author and date */
+
+.blog-title {
+    text-align: center;
+    margin: auto;
+}
+
+.blog-title h1 {
+    font-size: 3em;
+}
+
+.blog-title h3 {
+    font-size: 2.2em;
+}
+
+.blog-title h4 {
+    font-size: 1.5em;
+}
+
+.blog-left-nav {
+    float: left;
+    width: 80%;
+    margin: auto;
+    display: block;
+    position: relative;
+    text-align: justify;
+}
+
+.blog-left-nav h1 {
+    font-size: 2.2em;
+    padding-bottom: 5px padding-top: 0px;
+}
+
+.blog-left-nav p {
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.blog-left-nav li {
+    font-size: 1.5em;
+    line-height: 2em;
+}
+
+.blog-left-nav img {
+    width: 100%;
+    height: 550px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+/* Will change of color of every li element in ordered list (ol) */
+
+.first-word {
+    color: #ff4b35;
+}
+
+.blog-right-nav {
+    float: right;
+    width: 10%;
+    display: relative;
+    padding-top: 400px;
+}
+
+
+/*  Footer Section */
+
+.footer {
+    clear: both;
+    background-color: White;
+    color: black;
+    font-family: Open Sans;
+    font-size: 0.8em;
+    float: bottom;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+
+/*   */
+
+
+/*   */
+
+
+/*   */
+
+
+/*   */
+
+
+/*   */
+
+
+/*   */
+
+
+/*   */
+
+
+/*   */

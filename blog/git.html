@@ -1,38 +1,117 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Phase0 Week1 Blog</title>
+
+<head>
     <meta charset="UTF-8">
+    <!-- Meta Description for SEO  -->
+    <meta name="description" content="Benefits of Using Version Control Systems">
+    <meta name="keywords" content="git, github, version control system, programming">
+    <meta name="author" content="Sepand Assadi">
+    <!-- Social Share Kit CSS -->
+    <link rel="stylesheet" href="../Packages/social-share-kit-1.0.6/dist/css/social-share-kit.css" type="text/css">
+    <!-- Social Share Kit JS -->
+    <script type="text/javascript" src="../Packages/social-share-kit-1.0.6/dist/js/social-share-kit.js"></script>
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
-  </head>
-  <body>
-    <!-- This is going to be the header layout of website -->
-    <section class="header-container">
-      <div id="header">
-          <div id="home-button" class="button-header"><a href="#">Home</a></div>
-          <div class="button-header"><a href="#aboutme">About Me</a></div>
-          <div class="button-header"><a href="#">Portfolio</a></div>
-          <div class="button-header"><a href="#blogme">Blog</a></div>
-          <div class="button-header"><a href="#">Contact Me</a></div>
-      </div>
-    </section>
-    <!-- Up to here -->
-    <section class="wrapper"
-      <h1><center>Dev BootCamp Phase0 / Week 1 Blog</center></h1>
-      <h2><center>By Sepand Assadi</center></h2>
-      <h4><center>January 4th 2016<center></h4>
-      <section>
-        <p><font color="blue">1. What are the benefits of version control?</font> There are many benefits of using a version control system (<font color="red">VCS</font>) such as <li>Collaboration: Without VCS you and/or team of programmers are working on a set files all together in a same file! [Scary]</li><li>Storing: It will let you to get to a habit of storing your code consistently in a proper manner.</li><li>Restoring: In case you have done some unneccsary changes, you can always go back and redo.</li><li>Documentaion: Everytime you commit to changes you have to add a note on what is changing</li>
-        </p>
-        <p><font color="blue">2. How does git help you keep track of changes?</font> Git will use a "HEAD" index to point to your files inside a place created by user which called repository. These are the possible stages in any repository:<li><font color="green"><u>Untracked:</u></font> This is where a file in a repository is modified but not yet added to git to track changes. Run Command "Git add 'Name_Of_The_File'"</li><li><font color="blue"><u>Unmodified:</u></font> This is where the file has in tracking stage and has not yet been changed by user</li><li><font color="purple"><u>Modified:</u></font> This is where the file is in tracking stage and has been modified and is ready to commit</li><li><font color="red"><u>Staged:</u></font> This is where the file is added to stage </li></p>
-        <p><center><img src="https://git-scm.com/book/en/v2/book/02-git-basics/images/lifecycle.png" alt="Git Stages" style="width:700px;height:400px;"></center>
-        </p>
+    <title>Git Vs. Github</title>
+    <!-- Enter the name of the blog-->
+</head>
 
-        <p><font color="blue">3. Why use GitHub to store your code?</font> In general using git will be stored locally on your computer so in case of data corruption, everythig WOULD BE GONE! Using Github will store your data remotely, in my opinion these are the advantages of using Github: <li>Having more flexibility over Git</li><li>You can share your data with the world or keep private</li><li>Stable Cloud</li><li>Although not recommended but you can use the app for easier UI</li>
-        </p>
-
-          <!-- copy and paste as many sections as you want to add paragraphs -->
-      </section>
+<body>
+    <section id="page-wrapper">
+        <section class="navbar">
+            <!-- Navigation Bar Section -->
+            <div id="nav-left">
+                <a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img src="../imgs/logo.png" alt="Logo" /></a>
+            </div>
+            <div id="nav-right">
+                <a id="home-button" class="button-header" href="#">Home</a>
+                <a class="button-header" href="#aboutme">About Me</a>
+                <a class="button-header" href="#portfolio">Portfolio</a>
+                <a class="button-header" href="#">Blog</a>
+                <a class="button-header" href="#">Contact</a>
+            </div>
+        </section>
+        <section class="main-wallpaper">
+            <div><img src="../imgs/blog1wallpaper.png" alt="Version Control Systems"></div>
+        </section>
+        <section class="blog-content-wrapper">
+            <div class="blog-title">
+                <h1>Benefits of Using Version Control Systems</h1>
+                <!-- Title of Blog -->
+                <h3>By Sepand Assadi</h3>
+                <!-- By Who -->
+                <h4>Janury 4th, 2016</h4>
+                <!-- Date -->
+            </div>
+            <div>
+                <div class="blog-left-nav">
+                    <!-- First Paragraph -->
+                    <h1>What are the benefits of version control?</h1>
+                    <br>
+                    <p>There are many benefits of using a version control system (VCS) such as:</p>
+                    <ol>
+                        <li><span class="first-word">Collaboration:</span> Without VCS you and/or team of programmers are working on a set files all together in a same file! [Scary]</li>
+                        <li><span class="first-word">Storing:</span> It will let you to get to a habit of storing your code consistently in a proper manner.</li>
+                        <li><span class="first-word">Restoring:</span> In case you have done some unnecessary changes, you can always go back and redo.</li>
+                        <li><span class="first-word">Documentation:</span> Every time you commit to changes you have to add a note on what is changing</li>
+                    </ol>
+                    <!-- Picture goes here (if any) -->
+                    <img src="../imgs/blog1.png" alt="Git Overview">
+                    <!-- Second Paragraph -->
+                    <br>
+                    <br>
+                    <h1>How does git help you keep track of changes?</h1>
+                    <br>
+                    <p>Git will use a "HEAD" index to point to your files inside a place created by user which called repository. These are the possible stages in any repository: </p>
+                    <ol>
+                        <li><span class="first-word">Untracked:</span> This is where a file in a repository is modified but not yet added to git to track changes. Run Command "Git add 'Name_Of_The_File'".</li>
+                        <li><span class="first-word">Unmodified:</span> This is where the file has in tracking stage and has not yet been changed by user.</li>
+                        <li><span class="first-word">Modified:</span> This is where the file is in tracking stage and has been modified and is ready to commit.</li>
+                        <li><span class="first-word">Staged:</span> This is where the file is added to stage.</li>
+                    </ol>
+                    <!-- Third Paragraph -->
+                    <br>
+                    <br>
+                    <h1>Why use GitHub to store your code?</h1>
+                    <br>
+                    <p>In general using git will be stored locally on your computer so in case of data corruption, everything WOULD BE GONE! Using Github will store your data remotely, in my opinion these are the advantages of using Github:</p>
+                    <ol>
+                        <li><span class="first-word"></span> Having more flexibility over Git.</li>
+                        <li><span class="first-word"></span> You can share your data with the world or keep private.</li>
+                        <li><span class="first-word">Stable Cloud</span></li>
+                        <li><span class="first-word"></span> Although not recommended but you can use the app for easier UI.</li>
+                    </ol>
+                </div>
+                <div class="blog-right-nav">
+                    <script type="text/javascript">
+                    SocialShareKit.init({
+                        url: 'http://thinktankshark.github.io/blog',
+                        twitter: {
+                            url: 'http://thinktankshark.github.io/blog',
+                            via: '@sepandassadi'
+                        }
+                    });
+                    </script>
+                    <div class="ssk-group ssk-sticky ssk-right ssk-center ssk-lg">
+                        <a href="" class="ssk ssk-facebook"></a>
+                        <a href="" class="ssk ssk-twitter"></a>
+                        <a href="" class="ssk ssk-google-plus"></a>
+                        <a href="" class="ssk ssk-pinterest"></a>
+                        <a href="" class="ssk ssk-tumblr"></a>
+                    </div>
+                </div>
+        </section>
+        <footer class="footer">
+            <!-- Footer Section -->
+            <a href="mailto:info@sepandassadi.com"><img src="../imgs/gmail-w.jpg" onmouseover="this.src='../imgs/gmail-c.jpg'" onmouseout="this.src='../imgs/gmail-w.jpg'" alt="email" /></a>
+            <a href="https://www.facebook.com/sepand.sam.assadi"><img src="../imgs/fb-w.png" onmouseover="this.src='../imgs/fb-c.png'" onmouseout="this.src='../imgs/fb-w.png'" alt="facebook"></a>
+            <a href="https://www.linkedin.com/in/sepandassadi"><img src="../imgs/link-w.jpg" onmouseover="this.src='../imgs/link-c.png'" onmouseout="this.src='../imgs/link-w.jpg'" alt="linkedin"></a>
+            <a href="https://twitter.com/sepandassadi"><img src="../imgs/twitter-b.jpg" onmouseover="this.src='../imgs/twitter-c.png'" onmouseout="this.src='../imgs/twitter-b.jpg'" alt="twitter"></a>
+            <a href="https://plus.google.com/+SepandAssadi/posts"><img src="../imgs/google-w.jpg" onmouseover="this.src='../imgs/google-c.jpg'" onmouseout="this.src='../imgs/google-w.jpg'" alt="google+"></a>
+            <a href="https://www.instagram.com/sepand.assadi/"><img src="../imgs/insta-w.png" onmouseover="this.src='../imgs/insta-c.jpg'" onmouseout="this.src='../imgs/insta-w.png'" alt="google+"></a>
+            <p>Copyright© Sepand Assadi 2016</p>
+        </footer>
     </section>
-  </body>
+</body>
+
 </html>

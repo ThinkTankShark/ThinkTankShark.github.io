@@ -6,11 +6,6 @@
     text-decoration: none;
 }
 
-#wrapper {
-    margin: 0px;
-    padding: 0px;
-}
-
 
 /* Navigation Bar */
 
@@ -21,10 +16,11 @@
     margin: -10px 0px 0px 0px;
     background-color: white;
     font-family: Open Sans;
-    position: fixed;
     width: 100%;
     text-transform: uppercase;
     height: 74px;
+    position: fixed;
+    z-index: 10;
 }
 
 #nav-left {
@@ -243,19 +239,21 @@ div button {
 /* Footer Section */
 
 .footer {
-    background-color: White;
+    background-color: yellow;
     color: black;
     text-align: center;
-    padding-bottom: 15px;
-    padding-top: 10px;
-    height: 40px;
-    margin-bottom: 20px;
     font-family: Open Sans;
     font-size: 0.8em;
 }
 
 
 /*  */
+
+
 /*  */
+
+
 /*  */
+
+
 /*  */
