@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
+    <!-- Meta Description for SEO  -->
+    <meta name="description" content="What are the differences between relative, absolute, fixed, and static positioning?">
+    <meta name="keywords" content="CSS, HTML, Relative, Static, Absolute,FixedCSS">
+    <meta name="author" content="Sepand Assadi">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
-    <title></title>
-  </head>
-  <body>
-    <section class="wrapper">
-      <section class="navbar"> <!-- Navigation Bar Section -->
+    <!-- Social Share Kit CSS -->
+    <link rel="stylesheet" href="../Packages/social-share-kit-1.0.6/dist/css/social-share-kit.css" type="text/css">
+    <!-- Social Share Kit JS -->
+    <script type="text/javascript" src="../Packages/social-share-kit-1.0.6/dist/js/social-share-kit.js"></script>
+    <title>CSS3 Positions | Blog</title>
+    <!-- Enter the name of the blog-->
+</head>
+
+<body>
+    <section id="page-wrapper">
+        <section class="navbar">
+            <!-- Navigation Bar Section -->
             <div id="nav-left">
                 <a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img src="../imgs/logo.png" alt="Logo" /></a>
             </div>
@@ -19,14 +31,70 @@
                 <a class="button-header" href="#">Contact</a>
             </div>
         </section>
-        <section class="wallpaper">
-            <!-- Wallpaper Section -->
-            <a href="#aboutme">
-                <div id="bottom-point">
-                    <p id="arrow">&darr;</p>
-                </div>
-            </a>
+        <section class="main-wallpaper">
+            <!-- Enter the wallpaper picture-->
+            <div><img src="../imgs/blog2.jpg" alt="CSS HTML"></div>
         </section>
+        <section class="blog-content-wrapper">
+            <div class="blog-title">
+                <!-- First Paragraph -->
+                <h1>Absolute, Relative, Fixed Positioning: How Do They Differ?</h1>
+                <!-- Title of Blog -->
+                <h3>By Sepand Assadi</h3>
+                <!-- By Who -->
+                <h4>Janury 17th, 2016</h4>
+                <!-- Date -->
+            </div>
+            <div>
+                <div class="blog-left-nav">
+                    <p>An important concept to understand first is that every single element on a web page is a block. Literally a rectangle of pixels. This is easy to understand when when you set the element to display: block; or if that element is by default display: block; This means you can set a width and a height and that element will respect that. But elements that are display: inline, like a span by default, are also rectangles, they just flow onto the page different, lining up horizontally as they can.</p>
+                    <br>
+                    <p>Now that you are picturing every single page element as a block of pixels, we can talk about how positioning is used to get the blocks of pixels exactly where you want them to go. We're going to leave off any discussion of the box model, but that factors into this as well...</p><br>
+                    <ol>
+                        <li><span class="first-word">Static.</span>  This is the default for every single page element. Different elements don't have different default values for positioning, they all start out as static. Static doesn't mean much, it just means that the element will flow into the page as it normally would. The only reason you would ever set an element to position: static is to forcefully-remove some positioning that got applied to an element outside of your control. This is fairly rare, as positioning doesn't cascade.</li><img src="../imgs/static-position.jpg" alt="static position">
+                        <li><span class="first-word">Relative.</span> This type of positioning is probably the most confusing and misused. What it really means is "relative to itself". If you set position: relative; on an element but no other positioning attributes (top, left, bottom or right), it will no effect on it's positioning at all, it will be exactly as it would be if you left it as position: static; But if you DO give it some other positioning attribute, say, top: 10px;, it will shift it's position 10 pixels DOWN from where it would NORMALLY be. I'm sure you can imagine, the ability to shift an element around based on it's regular position is pretty useful. I find myself using this to line up form elements many times that have a tendency to not want to line up how I want them to.<br>
+                        There are two other things that happen when you set position: relative; on an element that you should be aware of. One is that it introduces the ability to use z-index on that element, which doesn't really work with statically positioned elements. Even if you don't set a z-index value, this element will now appear on top of any other statically positioned element. You can't fight it by setting a higher z-index value on a statically positioned element. The other thing that happens is it limits the scope of absolutely positioned child elements. Any element that is a child of the relatively positioned element can be absolutely positioned within that block.</li><img src="../imgs/relative-position.jpg" alt="Relative Position">
+                        <li><span class="first-word">Absolute.</span> This is a very powerful type of positioning that allows you to literally place any page element exactly where you want it. You use the positioning attributes top, left bottom and right to set the location. Remember that these values will be relative to the next parent element with relative (or absolute) positioning. If there is no such parent, it will default all the way back up to the <html> element itself meaning it will be placed relatively to the page itself.<br>
+                        The trade-off, and most important thing to remember, about absolute positioning is that these elements are removed from the flow of elements on the page. An element with this type of positioning is not affected by other elements and it doesn't affect other elements. This is a serious thing to consider every time you use absolute positioning. It's overuse or improper use can limit the flexibility of your site..</li><img src="../imgs/absolute-position.jpg" alt="Absolute Position">
+                        <li><span class="first-word">Fixed.</span> This type of positioning is fairly rare but certainly has its uses. A fixed position element is positioned relative to the viewport, or the browser window itself. The viewport doesn't change when the window is scrolled, so a fixed positioned element will stay right where it is when the page is scrolled, creating an effect a bit like the old school "frames" days.</li>
+                    </ol>
+                    <br>
+                    <p>Try this <a href="http://www.webdevbydoing.com/whats-the-difference-between-static-relative-absolute-and-fixed-positioning/" target="_blank">website</a>, it has a working example where you can change the positioning of each element inside of the container. The container itself has a position:relative Have fun!</p>
+                    <!-- Picture goes here (if any)
+            <img src="../imgs/blog1.png" alt="Git Overview"> -->
+                    <!-- Second Paragraph -->
+                </div>
+                <div class="blog-right-nav">
+                    <div class="blog-right-nav">
+                        <script type="text/javascript">
+                        SocialShareKit.init({
+                            url: 'http://thinktankshark.github.io/blog',
+                            twitter: {
+                                url: 'http://thinktankshark.github.io/blog',
+                                via: '@sepandassadi'
+                            }
+                        });
+                        </script>
+                        <div class="ssk-group ssk-sticky ssk-right ssk-center ssk-lg">
+                            <a href="" class="ssk ssk-facebook"></a>
+                            <a href="" class="ssk ssk-twitter"></a>
+                            <a href="" class="ssk ssk-google-plus"></a>
+                            <a href="" class="ssk ssk-pinterest"></a>
+                            <a href="" class="ssk ssk-tumblr"></a>
+                        </div>
+                    </div>
+        </section>
+        <footer class="footer">
+            <!-- Footer Section -->
+            <a href="mailto:info@sepandassadi.com"><img src="../imgs/gmail-w.jpg" onmouseover="this.src='../imgs/gmail-c.jpg'" onmouseout="this.src='../imgs/gmail-w.jpg'" alt="email" /></a>
+            <a href="https://www.facebook.com/sepand.sam.assadi"><img src="../imgs/fb-w.png" onmouseover="this.src='../imgs/fb-c.png'" onmouseout="this.src='../imgs/fb-w.png'" alt="facebook"></a>
+            <a href="https://www.linkedin.com/in/sepandassadi"><img src="../imgs/link-w.jpg" onmouseover="this.src='../imgs/link-c.png'" onmouseout="this.src='../imgs/link-w.jpg'" alt="linkedin"></a>
+            <a href="https://twitter.com/sepandassadi"><img src="../imgs/twitter-b.jpg" onmouseover="this.src='../imgs/twitter-c.png'" onmouseout="this.src='../imgs/twitter-b.jpg'" alt="twitter"></a>
+            <a href="https://plus.google.com/+SepandAssadi/posts"><img src="../imgs/google-w.jpg" onmouseover="this.src='../imgs/google-c.jpg'" onmouseout="this.src='../imgs/google-w.jpg'" alt="google+"></a>
+            <a href="https://www.instagram.com/sepand.assadi/"><img src="../imgs/insta-w.png" onmouseover="this.src='../imgs/insta-c.jpg'" onmouseout="this.src='../imgs/insta-w.png'" alt="google+"></a>
+            <p>Copyright© Sepand Assadi 2016</p>
+        </footer>
     </section>
-  </body>
+</body>
+
 </html>
