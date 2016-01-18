@@ -2,7 +2,6 @@
 
 /* Page Settings */
 
-
 /* Setting below will control the whole page */
 
 .page-wrapper {
@@ -26,6 +25,7 @@
 
 .blog-title h1 {
     font-size: 3em;
+    line-height: 2.7em;
 }
 
 .blog-title h3 {
@@ -40,6 +40,7 @@
     float: left;
     width: 80%;
     margin: auto;
+    padding-top: 30px;
     display: block;
     position: relative;
     text-align: justify;
@@ -47,12 +48,15 @@
 
 .blog-left-nav h1 {
     font-size: 2.2em;
-    padding-bottom: 5px padding-top: 0px;
+    padding-bottom: 5px
+    padding-top: 0px;
+    line-height: 2em;
 }
 
 .blog-left-nav p {
     font-size: 1.5em;
-    text-align: left;
+    text-align: justify;
+    line-height: 2em;
 }
 
 .blog-left-nav li {
@@ -67,6 +71,12 @@
     padding-bottom: 30px;
 }
 
+.blog-left-nav p a {color: blue;}
+.blog-left-nav img {
+  width: 30%;
+  height: 30%;
+  padding-left: 38%;
+}
 
 /* Will change of color of every li element in ordered list (ol) */
 
