@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     text-decoration: none;
+    font-family: Open Sans;
 }
 
 
@@ -235,15 +236,67 @@ div button {
     text-align: center;
 }
 
+/* Blog Section */
+.blog-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    padding-top: 20px;
+}
+
+.blog-table *{
+
+}
+
+.blog-table {margin: 0 auto;}
+.blog-table figcaption {
+    font-size: 1.4em;
+    text-shadow: 2px 2px #e6e6e6;
+    margin-bottom: -10px;
+}
+
+/* small blog icons */
+.sm-blog img {
+display: block;
+vertical-align: middle;
+text-align: center;
+height: 150px;
+width: 300px;
+margin-left: 50px;
+padding: 10px 15px 15px 15px;
+border-radius: 10%;}
+
+/* medium blog icons */
+.md-blog img {
+display: block;
+vertical-align: middle;
+text-align: center;
+height: 200px;
+width: 400px;
+padding: 15px 15px 15px 15px;
+border-radius: 10%;}
+
+/* large blog icons*/
+.lg-blog img {
+display: block;
+vertical-align: middle;
+text-align: center;
+height: 300px;
+width: 500px;
+margin-left: 150px;
+padding: 15px 15px 15px 15px;
+border-radius: 10%;}
 
 /* Footer Section */
 
 .footer {
-    background-color: yellow;
+    background-color: white;
     color: black;
     text-align: center;
     font-family: Open Sans;
     font-size: 0.8em;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 
