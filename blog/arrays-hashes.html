@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta Description for SEO  -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Sepand Assadi">
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <!-- Social Share Kit CSS -->
+    <link rel="stylesheet" href="../Packages/social-share-kit-1.0.6/dist/css/social-share-kit.css" type="text/css">
+    <!-- Social Share Kit JS -->
+    <script type="text/javascript" src="../Packages/social-share-kit-1.0.6/dist/js/social-share-kit.js"></script>
+    <!-- Highlight Syntax Module -->
+    <link rel="stylesheet" href="../packages/highlight/styles/monokai-sublime.css">
+    <script src="../packages/highlight/highlight.pack.js"></script>
+    <title>Array Vs. Hash| Blog</title>
+    <!-- Enter the name of the blog-->
+</head>
+
+<body>
+    <section id="page-wrapper">
+        <section class="navbar">
+            <!-- Navigation Bar Section -->
+            <div id="nav-left">
+                <a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img src="../imgs/logo.png" alt="Logo" /></a>
+            </div>
+            <div id="nav-right">
+                <a id="home-button" class="button-header" href="#">Home</a>
+                <a class="button-header" href="#aboutme">About Me</a>
+                <a class="button-header" href="#portfolio">Portfolio</a>
+                <a class="button-header" href="#">Blog</a>
+                <a class="button-header" href="#">Contact</a>
+            </div>
+        </section>
+        <section class="main-wallpaper">
+            <!-- Enter the wallpaper picture-->
+            <div><img src="../imgs/blog3wallpaper.jpg" alt=""></div>
+        </section>
+        <section class="blog-content-wrapper">
+            <div class="blog-title">
+                <!-- First Paragraph -->
+                <h1>Arrays Vs. Hashes in Ruby Programming Language</h1>
+                <!-- Title of Blog -->
+                <h3>By Sepand Assadi</h3>
+                <!-- By Who -->
+                <h4>Janury 4th, 2016</h4>
+                <!-- Date -->
+            </div>
+            <div>
+                <div class="blog-left-nav">
+                    <h1>Arrays:</h1>
+                    <p>are collections used to store and retrieve (lookup) data. Arrays are the workhorses of Ruby collections. Most methods operating on collections will return an Array as a result, even if the original collection was not one. In truth, they aren’t really arrays at all, but a kind of one-size-fits-all data structure. You can make them act like sets, stacks, or queues. They are the functional equivalent of Python lists.</p>
+                    <br>
+                    <h2>Creation</h2>
+                    <p>Ruby arrays are created similarly to those found in other dynamic languages.</p>
+                    <pre><code class="ruby">
+                        >> numbers = [1, 0, 7]
+                        >> numbers[2]
+                        => 7
+                        >> numbers.size
+                        => 3</code></pre>
+                    <p>Most languages will also error out if you try to access a negative array index. Ruby considers negative indices to start at the end of the array, working back towards the beginning as they increase.</p>
+                    <pre><code class="ruby">>> ["a","b","c"][-1]
+=> "c"
+>> ["a","b","c"][-3]
+=> "a"</code></pre>
+                    <h2>Array Ranges</h2>
+                    <p>Another useful feature of Ruby arrays is the ability to access ranges of elements. However, they can be tricky given that there are many different ways to specify a range of elements in Ruby.</p>
+                    <pre><code class="ruby">>> letters = %w{a b c d e f}
+=> ["a", "b", "c", "d", "e", "f"]
+>> letters[0..1]
+=> ["a", "b"]
+>> letters[0, 2]
+=> ["a", "b"]
+>> letters[0...2]
+=> ["a", "b"]
+>> letters[0..-5]
+=> ["a", "b"]
+>> letters[-6, 2]
+=> ["a", "b"]</code></pre>
+                    <p>Here are the reasonings behind these examples:</p>
+                    <ol>
+                        <li><span>letters[0..1] – give me elements 0 through 1</span></li>
+                        <li><span>letters[0, 2] – starting with index 0, give me 2 elements</span></li>
+                        <li><span >letters[0…2] – give me elements 0 until 2</span></li>
+                        <li><span>letters[0..-5] – give me elements 0 through -5</span></li>
+                        <li><span>letters[-6, 2] – starting with element -6, give me 2 elements</span></li>
+                    </ol>
+                    <p>If you are new to Ruby, you might be wondering how this is even possible. It turns out that array accesses are nothing more than calls to the #[] method.</p>
+                    <pre><code class="ruby">>> letters.[](0..1)
+=> ["a", "b"]</code></pre>
+                    <p>In addition, 0..1 is nothing more than a Range object in disguise. You can verify this by using the #class method.</p>
+                    <pre><code class="ruby">>> (0..1).class
+=> Range</code></pre>
+                    <p>So what is really going on is a Range object representing the target range of elements is passed to Array#[].</p>
+                    <pre><code class="ruby">>> letters.[](Range.new(0,1))
+=> ["a", "b"]</code></pre>
+                <h2>Transformation  </h2>
+                    <p>Here are some examples of the kinds of operations you can perform on Array.</p>
+                    <h3>Adding Elements</h3>
+                    <pre><code class="ruby">>> [1,2,3] << "a"
+=> [1,2,3,"a"]
+
+>> [1,2,3].push("a")
+=> [1,2,3,"a"]
+
+>> [1,2,3].unshift("a")
+=> ["a",1,2,3]
+
+>> [1,2,3] << [4,5,6]
+=> [1,2,3,[4,5,6]]</code></pre>
+                    <h3>Removing Elements</h3>
+                    <pre><code class="ruby">>> arr = [1,2,3]
+>> arr.pop
+=> 3
+>> arr
+=> [1,2]
+
+>> arr = ["a",1,2,3]
+>> arr.shift
+=> "a"
+>> arr
+=> [1,2,3]
+
+>> arr = [:a, :b, :c]
+>> arr.delete(:b)
+=> :b
+>> arr
+=> [:a, :c]
+>> arr.delete_at(1)
+=> :c
+>> arr
+=> [:a]</code></pre>
+                    <h3>Combining Arrays</h3>
+                    <pre><code class="ruby">>> [1,2,3] + [4,5,6]
+=> [1,2,3,4,5,6]
+
+>> [1,2,3].concat([4,5,6])
+=> [1,2,3,4,5,6]
+
+>> ["a",1,2,3,"b"] - [2,"a","b"]
+=> [1,3]</code></pre>
+                    <h3>Removing Nesting</h3>
+                    <pre><code class="ruby">>> [1,[2,3],[4,["a", nil]]].flatten
+=> [1,2,3,4,"a",nil]
+
+>> [1,[2,3],[4,["a", nil]]].flatten(1)
+=> [1,2,3,4,["a", nil]]</code></pre>
+                    <h3>Querying</h3>
+                    <pre><code class="ruby">>> ["a","b","c"].include? "d"
+=> false
+
+>> ["a", "a", "b"].count "a"
+=> 2
+
+>> ["a", "a", "b"].count "b"
+=> 1
+
+>> [1,2,[3,4]].size
+=> 3
+</code></pre>
+                    <h2>Iteration</h2>
+                    <p>Iteration is an area where Ruby really shines. In many languages iteration feels awkwardly tacked on. However, in Ruby you should never feel the need to write a classical for loop.
+
+The central construct in Ruby iteration is the #each method.</p>
+                    <pre><code class="ruby">>> ["first", "middle", "last"].each { |i| puts i.capitalize }
+First
+Middle
+Last</code></pre>
+                    <p>Another handy method is #each_with_index which passes the current index as the second argument to the block.</p>
+                    <pre><code class="ruby">>> ["a", "b", "c"].each_with_index do |letter, index|
+>>   puts "#{letter.upcase}: #{index}"
+>> end
+A: 0
+B: 1
+C: 2</code></pre>
+                    <p>For more hands on examples on Arrays please <a href="http://www.sitepoint.com/guide-ruby-collections-part-arrays/" target="_blank">visit this website</a></p>
+                    <hr>
+                    <br>
+                    <h1>Hashes</h1>
+                    <p>Sometimes you need to map one value to another. For example, you might want to map a product ID to an array containing information about that product. If the product IDs were all integers, you could do this with Array, but at the risk of wasting a lot of space in between IDs. Ruby hashes function as associative arrays where keys are not limited to integers. They are similar to Python’s dictionaries.</p>
+                    <h2>Creation</h2>
+                    <p>Like arrays, hashes have both literal and constructor initialization syntax.</p>
+                    <pre><code class="ruby">>> colors = {}
+>> colors['red'] = 0xff0000
+
+>> colors = Hash.new
+>> colors['red'] = 0xff0000</code></pre>
+                    <p>As with arrays, it’s possible to create a hash with starting values. This is where we get to see the idiomatic => (“hash rocket”) operator.</p>
+                    <pre><code class="ruby">>> colors = {
+>>   'red' => 0xff0000,
+>>   'blue' => 0x0000ff
+>> }
+=> {"red"=>16711680, "blue"=>255}</code></pre>
+                    <h2>Deletion</h2>
+                    <p>If you want to remove a key-pair from a hash, you can use #delete. It might be tempting to simply set the value at the key to nil like in Lua tables, but the key will still be part of the hash and thus included in iteration.</p>
+                    <pre><code class="ruby">>> colors['red'] = nil
+>> colors.size
+=> 2
+
+>> colors.delete('red')
+>> colors.size
+=> 1</code></pre>
+                    <h2>Iteration</h2>
+                    <p>Hashes are iterated like Arrays, except two values are passed to blocks instead of one.</p>
+                    <pre><code class="ruby">>> hash = {"Juan" => 24, "Isidora" => 35}
+>> hash.each { |name, age| puts "#{name}: #{age}" }
+Juan: 24
+Isidora: 35</code></pre>
+                    <p>Block variables like name and age in the previous example are just placeholders. They are arbitrary and could be anything, though it is good practice to make them descriptive.</p>
+                    <br>
+                    <h2>Keyword Arguments With Hashes</h2>
+                    <p>Python provides the ability to call functions using keywords arguments With keywords, it isn’t necessary to pass arguments in a specific order or pass any particular arguments at all. Although Ruby technically does not provide keyword arguments, a hash can be used to simulate them. If a hash is the last argument in a method call, the curly braces can be left off.</p>
+                    <pre><code class="ruby">>> class Person
+>>   attr_accessor :first, :last, :weight, :height
+
+>>   def initialize(params = {})
+>>     @first = params[:first]
+>>     @last = params[:last]
+>>     @weight = params[:weight]
+>>     @height = params[:height]
+>>   end
+>> end
+
+>> p = Person.new(
+>>   height: 170cm,
+>>   weight: 72,
+>>   last: 'Doe',
+>>   first: 'John'
+>> )</code></pre>
+                    <p>Note that params = {} isn’t strictly necessary, but it protects your code from throwing an ArgumentError if no argument is passed, and it makes the intended argument type clearer.</p>
+                    <br>
+                    <h2>Ranges</h2>
+                    <p>The Range class is a sort of quasi-collection. It can be iterated like the other collections that use Enumerable, but it’s not a container for arbitrary elements.</p>
+                    <pre><code class="ruby">>> r = Range.new('a', 'c')
+=> 'a'..'c'
+>> r.each { |i| puts i }
+a
+b
+c</code></pre>
+                    <p>Before, I showed that Ranges can slice arrays or produce indices for iterating through them.</p>
+                    <pre><code class="ruby">>> letters = [:a,:b,:c,:d,:e]
+>> letters[1..3]
+=> [:b, :c, :d]
+
+>> (1..3).map { |i| letters[i].upcase }
+=> [:B, :C, :D]</code></pre>
+                    <p>In addition to slicing arrays, Ranges can simplify case statement logic.</p>
+                    <pre><code class="ruby">>> def theme(year)
+>>   case year
+>>     when 1970..1979 then "War Bad, Black People Not Bad"
+>>     when 1980..1992 then "Cocaine, Money, and The Future"
+>>     when 1993..2000 then "Gillian Anderson, Sitcoms in The FriendZone, and AOL"
+>>     when 2000..2013 then "RIP, Music"
+>>   end
+>> end
+
+>> theme(1987)
+=> "Cocaine, Money, and The Future"</code></pre>
+                    <p>For more information and examples on Hashes, please <a href="http://www.sitepoint.com/guide-ruby-collections-ii-hashes-sets-ranges/" target="_blank">visit this website!</p>
+                    <br>
+                    <br>
+                    <p>Till next blog, adios!</p>
+
+                    <!-- Picture goes here (if any)
+            <img src="../imgs/blog1.png" alt="Git Overview"> -->
+                    <!-- Second Paragraph -->
+                </div>
+                <div class="blog-right-nav">
+                    <div class="blog-right-nav">
+                        <script type="text/javascript">
+                        SocialShareKit.init({
+                            url: 'http://thinktankshark.github.io/index.html#blog',
+                            twitter: {
+                                url: 'http://thinktankshark.github.io/index.html#blog',
+                                via: '@sepandassadi'
+                            }
+                        });
+                        </script>
+                        <div class="ssk-group ssk-sticky ssk-right ssk-center ssk-lg">
+                            <a href="" class="ssk ssk-facebook"></a>
+                            <a href="" class="ssk ssk-twitter"></a>
+                            <a href="" class="ssk ssk-google-plus"></a>
+                            <a href="" class="ssk ssk-pinterest"></a>
+                            <a href="" class="ssk ssk-tumblr"></a>
+                        </div>
+                    </div>
+        </section>
+        <footer class="footer">
+            <!-- Footer Section -->
+            <a href="mailto:info@sepandassadi.com"><img src="../imgs/gmail-w.jpg" onmouseover="this.src='../imgs/gmail-c.jpg'" onmouseout="this.src='../imgs/gmail-w.jpg'" alt="email" /></a>
+            <a href="https://www.facebook.com/sepand.sam.assadi"><img src="../imgs/fb-w.png" onmouseover="this.src='../imgs/fb-c.png'" onmouseout="this.src='../imgs/fb-w.png'" alt="facebook"></a>
+            <a href="https://www.linkedin.com/in/sepandassadi"><img src="../imgs/link-w.jpg" onmouseover="this.src='../imgs/link-c.png'" onmouseout="this.src='../imgs/link-w.jpg'" alt="linkedin"></a>
+            <a href="https://twitter.com/sepandassadi"><img src="../imgs/twitter-b.jpg" onmouseover="this.src='../imgs/twitter-c.png'" onmouseout="this.src='../imgs/twitter-b.jpg'" alt="twitter"></a>
+            <a href="https://plus.google.com/+SepandAssadi/posts"><img src="../imgs/google-w.jpg" onmouseover="this.src='../imgs/google-c.jpg'" onmouseout="this.src='../imgs/google-w.jpg'" alt="google+"></a>
+            <a href="https://www.instagram.com/sepand.assadi/"><img src="../imgs/insta-w.png" onmouseover="this.src='../imgs/insta-c.jpg'" onmouseout="this.src='../imgs/insta-w.png'" alt="google+"></a>
+            <p>Copyright© Sepand Assadi 2016</p>
+        </footer>
+    </section>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+</body>
+
+</html>

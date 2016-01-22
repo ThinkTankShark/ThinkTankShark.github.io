@@ -28,6 +28,7 @@
     line-height: 2.7em;
 }
 
+
 .blog-title h3 {
     font-size: 2.2em;
 }
@@ -56,12 +57,23 @@
 .blog-left-nav p {
     font-size: 1.5em;
     text-align: justify;
-    line-height: 2em;
+    line-height: 1.5em;
+}
+/* Changing color of numbers list */
+ol {
+    counter-reset: item;
+    margin-left: 30px;
 }
 
-.blog-left-nav li {
-    font-size: 1.5em;
-    line-height: 2em;
+ol li {
+    display: block;
+    font-size: 1.4em;
+    line-height: 1.5em;
+}
+ol li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: #cb2027;
 }
 
 .blog-left-nav img {
@@ -81,11 +93,11 @@
 /* Will change of color of every li element in ordered list (ol) */
 
 .first-word {
-    color: #ff4b35;
+    color: #ff4b35
 }
 
 .blog-right-nav {
-    float: right;
+    float: rblog-left-navight;
     width: 10%;
     display: relative;
     padding-top: 400px;
@@ -109,8 +121,13 @@
 }
 
 
-/*   */
-
+/* Using for Embedded Coding Syntax  */
+pre {
+    text-align: left;
+    margin-left: auto;
+    padding-left: 0px;
+    margin-bottom: 20px;
+}
 
 /*   */
 
