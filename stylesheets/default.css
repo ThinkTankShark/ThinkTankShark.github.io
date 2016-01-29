@@ -1,312 +1,253 @@
 /* Body Wrapper */
 
 * {
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
-    font-family: Open Sans;
+margin: 0px;
+padding: 0px;
+text-decoration: none;
+font-family: 'Roboto', sans-serif;
+font-weight: 400;
 }
 
 
 /* Navigation Bar */
 
 .navbar {
-    padding-top: 0px;
-    padding-bottom: 10px;
-    float: top;
-    margin: -10px 0px 0px 0px;
-    background-color: white;
-    font-family: Open Sans;
-    width: 100%;
-    text-transform: uppercase;
-    height: 74px;
-    position: fixed;
-    z-index: 10;
+padding-top: 0px;
+padding-bottom: 10px;
+float: top;
+margin: -10px 0px 0px 0px;
+background-color: white;
+font-family: Open Sans;
+width: 100%;
+text-transform: uppercase;
+height: 74px;
+position: fixed;
+z-index: 10;
 }
 
 #nav-left {
-    margin-top: -5px;
-    margin-left: 25px;
-    float: left;
+margin-top: -5px;
+margin-left: 25px;
+float: left;
 }
 
 #nav-left img {
-    height: 74px;
-    padding-top: 15px;
+height: 74px;
+padding-top: 15px;
 }
 
 #nav-right {
-    float: right;
-    font-size: 1em;
-    margin-right: 25px;
+float: right;
+font-size: 1em;
+margin-right: 25px;
 }
 
 #home-button {
-    background-color: #e6e6e6;
-    border-bottom: 4px solid #69f0ae;
+background-color: #e6e6e6;
+border-bottom: 4px solid #69f0ae;
 }
 
 .button-header {
-    text-align: center;
-    vertical-align: middle;
-    line-height: 80px;
-    width: 100px;
-    display: inline-block;
+text-align: center;
+vertical-align: middle;
+line-height: 80px;
+width: 100px;
+display: inline-block;
 }
 
 nav a {
-    text-decoration: none;
-    color: black;
+text-decoration: none;
+color: black;
 }
 
 .button-header:hover {
-    background-color: #e6e6e6;
-    text-decoration: none;
-    color: black;
-    border-bottom: 4px solid #69f0ae;
+background-color: #e6e6e6;
+text-decoration: none;
+color: black;
+border-bottom: 4px solid #69f0ae;
 }
 
 .button-header div:hover {
-    border-bottom: 4px solid #69f0ae;
+border-bottom: 4px solid #69f0ae;
 }
 
 .button-header a:link {
-    text-decoration: none;
-    color: black;
+text-decoration: none;
+color: black;
 }
 
 .button-header a:visited {
-    color: black;
+color: black;
 }
 
 
 /* Wallpaper Section */
 
 .wallpaper {
-    background-image: url("../imgs/wallpaper.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    padding: 75px 0;
-    margin-bottom: 5px;
+margin-right: 0px;
+height:700px;
 }
 
-.title {
-    /* Changing the wallpaper h1 */
-    font-family: Open sans;
-    font-size: 3em;
-    color: white;
-    padding-top: 600px;
+.wallpaper img {
+width:100%;
+height: 700px;
+margin-top: 20px;
+max-width: 100%;
+max-height: 100%;
+margin-bottom: 50px;
 }
-
-
-/*  Text Animation */
-
-span p {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 6.25em;
-    animation: type 3s steps(60, end);
-    display: inline-block;
-    margin-bottom: -15px;
-}
-
-@keyframes type {
-    from {
-        width: 0;
-    }
-}
-
-@keyframes blink {
-    to {
-        opacity: .0;
-    }
-}
-
 
 /*  Arrow Pointer */
 
 #bottom-point {
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    background-color: #69f0ae;
-    text-decoration: none;
-    margin-left: 48%;
-    margin-top: 10px;
+border-radius: 100%;
+max-width: 50px;
+max-height: 50px;
+position: relative;
+background-color: #69f0ae;
+text-decoration: none;
+margin-left: 48%;
+margin-top: -190px;
 }
 
 #arrow {
-    text-align: center;
-    color: #1a237e;
-    text-align: middle;
-    font-size: 25px;
-    padding-top: 10px;
+text-align: center;
+color: #1a237e;
+text-align: middle;
+font-size: 25px;
+padding-top: 10px;
+padding-bottom: 5px;
 }
-
 
 /* About Me Section */
-
-.about-me {
-    clear: both;
-    background-image: url("../imgs/wallpaper2.jpg");
-    position: relative;
-    height: 530px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top;
-    background-size: cover;
+#about-me-wrapper {
+margin: 10px;
+padding: 5px;
+margin-top: 40px;
 }
 
-#aboutme-title {
-    float: left;
-    width: 40%;
-    font-family: Open Sans;
-    font-size: 2em;
-    margin: auto;
-    padding: 5% 0 0 15%;
-    text-align: justify;
+#about-me-top {
+height: 700px;
+width: 95%;
+margin: 20px;
+margin-bottom: 100px;
 }
 
-#aboutme-picture {
-    float: right;
-    padding: 5% 20% 0 0;
+.about-top-layout {text-align: center;}
+
+.about-top-layout p{
+text-align: center;
+margin: auto;
+width: 100%;
+font-size: 55px;
+text-transform: uppercase;
+padding: 10px;
+letter-spacing: 2px;
+font-family: 'Roboto', sans-serif;
+font-weight: 200;
 }
 
-div img {
-    border-radius: 30%;
-    height: 300px;
+.about-top-layout img{
+text-align: center;
+margin: auto;
+width: 250px;
+height: 250px;
+border-radius: 20%;
+padding-bottom: 20px;
 }
 
-#aboutme-education-left {
-    margin-top: 80px;
-    margin-left: 20%;
-    width: 50%;
-    float: left;
+
+.about-top-layout h4{
+text-align: center;
+margin: auto;
+width: 80%;
+font-size: 24px;
+letter-spacing: 1px;
+font-family: 'Roboto', sans-serif;
+line-height: 40px;
 }
 
-#aboutme-education-right {
-    float: right;
-    margin-top: 130px;
-    margin-right: 380px;
+.line-separator{
+height:6px;
+background:#69f0ae;
+width: 8%;
+text-align: center;
+margin: auto;
+margin-top: 20px;
+margin-bottom: 20px;
+
 }
 
+#social-media-icons img {
+height: 90%;
+width: 90%;
+margin: auto;
+border-radius: 50%;
+}
+
+#social-media-icons div {
+display: inline-block;
+margin-top: 20px;
+}
+
+/*  This is the resume download button */
+/*div form{
+padding-top: -20px;
+}
 div button {
-    background: url("../imgs/button.jpg") no-repeat scroll 0 0 transparent;
-    height: 100px;
-    width: 100px;
-    font-size: 1.4em;
-    background-size: 100%;
-    border-radius: 40%;
+background: url("../imgs/button.jpg") no-repeat scroll 0 0 transparent;
+height: 90px;
+width: 90px;
+font-size: 1.4em;
+background-size: 100%;
+border-radius: 50%;
+}*/
+
+#about-me-bottom {
+height: 500px;
+width: 95%;
+margin: 20px;
+margin-top: -30px;
 }
 
-.aboutme-education-each {}
-
-.aboutme-education-each p {
-    display: inline;
-    font-family: Open Sans;
-    font-size: 1.7em;
-    float: right;
-    padding: 70px 200px 0px 0px;
-}
-
-.aboutme-education-each img {
-    height: 130px;
-    width: 130px;
-    padding: 20px;
-    display: inline;
-}
-
-.sm-icons {
-    height: 100px;
-    width: 100px;
-}
-
-
-/* Portfolio Section */
-
-.portfolio {
-    font-size: 4em;
-    padding: 30px 0;
+.about-bottom-layout {
     margin: auto;
-    clear: both;
     text-align: center;
 }
 
-/* Blog Section */
-.blog-wrapper {
+#education-header {
+text-align: center;
+margin: auto;
+width: 100%;
+font-size: 55px;
+text-transform: uppercase;
+padding: 10px;
+letter-spacing: 2px;
+font-family: 'Roboto', sans-serif;
+font-weight: 200;
+margin-bottom: 10px;
+}
+
+.about-bottom-layout img {
+    height: 300px;
+    width: 300px;
+}
+.about-bottom-layout figure {
+    display: inline-block;
+}
+
+.about-bottom-layout figcaption {
+    font-size: 17px;
     text-align: center;
-    margin: 0 auto;
-    padding-bottom: 100px;
-    padding-top: 20px;
+    padding:10px;
+    margin: 5px;
+    font-weight: bold;
 }
 
-.blog-table *{
-
-}
-
-.blog-table {margin: 0 auto;}
-.blog-table figcaption {
-    font-size: 1.4em;
-    text-shadow: 2px 2px #e6e6e6;
-    margin-bottom: -10px;
-}
-
-/* small blog icons */
-.sm-blog img {
-display: block;
-vertical-align: middle;
-text-align: center;
-height: 150px;
-width: 300px;
-margin-left: 50px;
-padding: 10px 15px 15px 15px;
-border-radius: 10%;}
-
-/* medium blog icons */
-.md-blog img {
-display: block;
-vertical-align: middle;
-text-align: center;
-height: 200px;
-width: 400px;
-padding: 15px 15px 15px 15px;
-border-radius: 10%;}
-
-/* large blog icons*/
-.lg-blog img {
-display: block;
-vertical-align: middle;
-text-align: center;
-height: 300px;
-width: 500px;
-margin-left: 150px;
-padding: 15px 15px 15px 15px;
-border-radius: 10%;}
-
-/* Footer Section */
-
-.footer {
-    background-color: white;
-    color: black;
-    text-align: center;
-    font-family: Open Sans;
-    font-size: 0.8em;
-    padding-top: 10px;
-    padding-bottom: 10px;
+figure img:hover {
+    border: 1px solid gray;
+    border-radius: 10%;
+    background-color: #d7d8d9;
 }
 
 
-/*  */
-
-
-/*  */
-
-
-/*  */
-
-
-/*  */
