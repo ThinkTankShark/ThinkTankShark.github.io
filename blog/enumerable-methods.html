@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta Description for SEO  -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Sepand Assadi">
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <!-- Social Share Kit CSS -->
+    <link rel="stylesheet" href="../Packages/social-share-kit-1.0.6/dist/css/social-share-kit.css" type="text/css">
+    <!-- Social Share Kit JS -->
+    <script type="text/javascript" src="../Packages/social-share-kit-1.0.6/dist/js/social-share-kit.js"></script>
+    <link rel="stylesheet" href="../Packages/highlight/styles/monokai-sublime.css">
+    <script src="../Packages/highlight/highlight.pack.js"></script>
+    <title>Ruby Enumerable | Blog</title>
+    <!-- Enter the name of the blog-->
+</head>
+
+<body>
+
+    <section id="page-wrapper">
+        <section class="navbar">
+            <!-- Navigation Bar Section -->
+            <div id="nav-left">
+                <a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img src="../imgs/logo.png" alt="Logo" /></a>
+            </div>
+            <div id="nav-right">
+                <a id="home-button" class="button-header" href="#">Home</a>
+                <a class="button-header" href="#aboutme">About Me</a>
+                <a class="button-header" href="#portfolio">Portfolio</a>
+                <a class="button-header" href="#">Blog</a>
+                <a class="button-header" href="#">Contact</a>
+            </div>
+        </section>
+        <section class="main-wallpaper">
+            <!-- Enter the wallpaper picture-->
+            <div><img src="../imgs/blog6.jpg" alt=""></div>
+        </section>
+        <section class="blog-content-wrapper">
+            <div class="blog-title">
+                <!-- First Paragraph -->
+                <h1>Enumerable#cycle</h1>
+                <!-- Title of Blog -->
+                <h3>By Sepand Assadi</h3>
+                <!-- By Who -->
+                <h4>Janury 29th, 2016</h4>
+                <!-- Date -->
+            </div>
+            <div>
+                <div class="blog-left-nav">
+                    <h1>Enumerable#cycle and Arrays</h1>
+                    <br>
+                    <p>When used on an array and a block is provided, cycle passes each item to the block. Once the last array item has been passed to the block, cycle starts over again at the beginning of the array. cycle goes through the array forever unless it encounters a break statement in the block.</p>
+                    <br>
+                    <pre><code class="ruby"># This example is a slightly fancier version of the example
+# you'll see at RubyDoc.org
+days_of_week = %w{Monday Tuesday Wednesday Thursday Friday Saturday Sunday}
+=> ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+# This will print the days of the week over and over,
+# forever until you stop it with control-c.
+days_of_week.cycle {|day| puts day}
+=> Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+Monday
+Tuesday
+...
+
+# The cycle can be broken with the "break" statement
+days_of_week.cycle do |day|
+    puts day
+    break if day == "Friday"
+end
+=> Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+=> nil</code></pre>
+                    <br>
+                    <p>The better use for cycle is when you use it to create an object that spits out the next item in a repeating sequence.</p>
+                    <br>
+                    <pre><code class="ruby"># Let's create an enumerator that we can use to give us
+# days of the week in a repeating sequence.
+days = days_of_week.cycle
+=> #<enumerable::Enumerator:0x147c0b0>
+
+# Enumerator's "next" method gives us the next day of the week
+days.next
+=> "Monday"
+
+days.next
+=> "Tuesday"
+
+days.next
+=> "Wednesday"
+
+# Enumerator's "rewind" method resets the enumerator back
+# to the first item
+days.rewind
+=> #<enumerable::Enumerator:0x14
+
+days.next
+=> "Monday"
+
+...
+
+# If you keep going, the enumerator will "wrap around" back
+# to the beginning
+days.next
+=> "Saturday"
+
+days.next
+=> "Sunday"
+
+days.next
+=> "Monday"</code></pre>
+<br>
+<h1>Enumerable#cycle and Hashes</h1>
+<br>
+<p>When used on a hash and a block is provided, collect and map pass each key/value pair in the hash to the block, which you can “catch” as either:
+</p>
+<br>
+
+
+                    <ol>
+                        <li><span class="first-word">A two-element array</span>, with the key as element 0 and its corresponding value as element 1, or</li>
+                        <li><span class="first-word">Two separate items</span>, with the key as the first item and its corresponding value as the second item.</li>
+                    </ol>
+                    <br>
+                    <p>Each key/value pair is passed to the block, where the operation in the block is performed on the item. Once the last hash item has been passed to the block, cycle starts over again at the beginning of the hash. cycle goes through the hash forever unless it encounters a break statement in the block.</p>
+                    <br>
+                    <pre><code class="ruby"># Here we'll take the RubyDoc.org example for "cycle"
+# but apply it to a hash of the crew of the Enterprise-D
+crew = {:captain => "Picard", :first_officer => "Riker", \
+:science_officer => "Data", :tactical_officer => "Worf"}
+=> {:captain=>"Picard", :first_officer=>"Riker",
+:science_officer=>"Data", :tactical_officer=>"Worf"}
+
+# This will print the crew's rank and name over and over,
+# forever until you stop it with control-c.
+crew.cycle {|crewmember| p crewmember}
+=> [:captain, "Picard"]
+[:first_officer, "Riker"]
+[:science_officer, "Data"]
+[:tactical_officer, "Worf"]
+[:captain, "Picard"]
+[:first_officer, "Riker"]
+[:science_officer, "Data"]
+[:tactical_officer, "Worf"]
+[:captain, "Picard"]
+[:first_officer, "Riker"]
+[:science_officer, "Data"]
+[:tactical_officer, "Worf"]
+[:captain, "Picard"]
+[:first_officer, "Riker"]
+...
+
+# The cycle can be broken with the "break" statement
+crew.cycle do |rank, name|
+    puts "Rank: #{rank} - Name: #{name}"
+    break if rank == :science_officer
+end
+=> Rank: captain - Name: Picard
+Rank: first_officer - Name: Riker
+Rank: science_officer - Name: Data
+=> nil</code></pre>
+<br>
+<p>We can use the same technique that we used with arrays and use cycle to create an object that spits out the next item in a cycling hash. Each time we get an item from the object, it comes in the form of a two-element array where the first element is the key and the second element is the corresponding value.</p>
+<br>
+<pre><code class="ruby"># Let's create an enumerator that we can use to give us
+# the Enterprise-D crew's rank and name in a repeating sequence.
+crewmembers = crew.cycle
+=> #<enumerable::Enumerator:0x117fdf8>
+
+# numerator’s “next” method gives us the next crewmember
+crewmembers.next
+=> [:captain, "Picard"]
+
+crewmembers.next
+=> [:first_officer, "Riker"]
+
+crewmembers.next
+=> [:science_officer, "Data"]
+
+# Enumerator’s “rewind” method resets the enumerator back
+# to the first item
+crewmembers.rewind
+=> #<enumerable::Enumerator:0x117fdf8>
+
+crewmembers.next
+=> [:captain, "Picard"]
+
+...
+
+# If you keep going, the enumerator will “wrap around” back
+# to the beginning
+crewmembers.next
+=> [:tactical_officer, "Worf"]
+
+crewmembers.next
+=> [:captain, "Picard"]
+
+crewmembers.next
+=> [:first_officer, "Riker"]</code></pre>
+<br>
+<p>Let’s try one more example! In this one, we’ll use cycle to create three different enumerators — two made from arrays, one from a hash — to assign cooking chores for the Enterprise-D crew for the next ten days.</p>
+<br>
+<pre><code class="ruby"># Create an enumerator for days
+days = %w{Monday Tuesday Wednesday Thursday Friday Saturday Sunday}.cycle
+=> #<enumerable::Enumerator:0x14c678c>
+
+# Create an enumerator for dinners
+dinners = ["Jerk chicken", "Lamb vindaloo", "Chicken fried steak", \
+"Yeung Chow fried rice", "Tonkatsu", "Coq au Vin", "Chunky bacon", \
+"Pierogies", "Salisbury steak", "Bibim Bap", \
+"Roast beef", "Souvlaki"].cycle
+=> #<enumerable::Enumerator:0x1496f14>
+
+# Make sure we're starting from the beginning of the crew hash
+crewmembers.rewind
+=> #<enumerable::Enumerator:0x1496f14>
+
+# Let's assign dinner-cooking duties to the crew!
+10.times do
+    day = days.next
+    dinner = dinners.next
+    chef = crewmembers.next[1]
+    puts "On #{day}, Crewman #{chef} will prepare #{dinner}."
+end
+=> On Monday, Crewman Picard will prepare Jerk chicken.
+On Tuesday, Crewman Riker will prepare Lamb vindaloo.
+On Wednesday, Crewman Data will prepare Chicken fried steak.
+On Thursday, Crewman Worf will prepare Yeung Chow fried rice.
+On Friday, Crewman Picard will prepare Tonkatsu.
+On Saturday, Crewman Riker will prepare Coq au Vin.
+On Sunday, Crewman Data will prepare Chunky bacon.
+On Monday, Crewman Worf will prepare Pierogies.
+On Tuesday, Crewman Picard will prepare Salisbury steak.
+On Wednesday, Crewman Riker will prepare Bibim Bap.</code></pre>
+<br>
+<br>
+        </section>
+        <footer class="footer">
+            <!-- Footer Section -->
+            <a href="mailto:info@sepandassadi.com"><img src="../imgs/gmail-w.jpg" onmouseover="this.src='../imgs/gmail-c.jpg'" onmouseout="this.src='../imgs/gmail-w.jpg'" alt="email" /></a>
+            <a href="https://www.facebook.com/sepand.sam.assadi"><img src="../imgs/fb-w.png" onmouseover="this.src='../imgs/fb-c.png'" onmouseout="this.src='../imgs/fb-w.png'" alt="facebook"></a>
+            <a href="https://www.linkedin.com/in/sepandassadi"><img src="../imgs/link-w.jpg" onmouseover="this.src='../imgs/link-c.png'" onmouseout="this.src='../imgs/link-w.jpg'" alt="linkedin"></a>
+            <a href="https://twitter.com/sepandassadi"><img src="../imgs/twitter-b.jpg" onmouseover="this.src='../imgs/twitter-c.png'" onmouseout="this.src='../imgs/twitter-b.jpg'" alt="twitter"></a>
+            <a href="https://plus.google.com/+SepandAssadi/posts"><img src="../imgs/google-w.jpg" onmouseover="this.src='../imgs/google-c.jpg'" onmouseout="this.src='../imgs/google-w.jpg'" alt="google+"></a>
+            <a href="https://www.instagram.com/sepand.assadi/"><img src="../imgs/insta-w.png" onmouseover="this.src='../imgs/insta-c.jpg'" onmouseout="this.src='../imgs/insta-w.png'" alt="google+"></a>
+            <p>Copyright© Sepand Assadi 2016</p>
+        </footer>
+    </section>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+
+</body>
+
+</html>
