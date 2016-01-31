@@ -280,11 +280,13 @@ margin-bottom: 20px;
 height: 450px;
 width: 500px;
 margin: 0px 10px 20px 10px;
+border-radius: 5%;
 }
 
 .blog-img-big img {
 height: 900px;
 width: 1000px;
+border-radius: 5%;
 }
 
 /* Shadow effect for blog section wehen hover */
@@ -298,14 +300,15 @@ a:hover img.imagedropshadow {
 border: solid 1px #CCC;
 -moz-box-shadow: 0px 0px 30px 3px #999;
 -webkit-box-shadow: 0px 0px 30px 3px #999;
-box-shadow: 0px 0px 30px 3px #999;}
+box-shadow: 0px 0px 30px 3px #999;
+}
 
 /* Footer Section */
 
 footer {
-    background-color: white;
-    color: black;
-    text-align: center;
-    font-size: 0.8em;
-    padding-bottom: 10px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 0.8em;
+  padding-bottom: 10px;
 }
