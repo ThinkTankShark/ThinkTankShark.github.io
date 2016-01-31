@@ -1,8 +1,8 @@
 /* Body Wrapper */
 
 * {
-margin: 0px;
-padding: 0px;
+margin: 0%;
+padding: 0%;
 text-decoration: none;
 font-family: 'Roboto', sans-serif;
 font-weight: 400;
@@ -124,6 +124,7 @@ padding-bottom: 5px;
 margin: 10px;
 padding: 5px;
 margin-top: 40px;
+width: 100%;
 }
 
 #about-me-top {
@@ -211,11 +212,11 @@ margin-top: -30px;
 }
 
 .about-bottom-layout {
-    margin: auto;
-    text-align: center;
+margin: auto;
+text-align: center;
 }
 
-#education-header {
+.section-header {
 text-align: center;
 margin: auto;
 width: 100%;
@@ -229,25 +230,82 @@ margin-bottom: 10px;
 }
 
 .about-bottom-layout img {
-    height: 300px;
-    width: 300px;
+height: 300px;
+width: 300px;
 }
 .about-bottom-layout figure {
-    display: inline-block;
+display: inline-block;
 }
 
 .about-bottom-layout figcaption {
-    font-size: 17px;
-    text-align: center;
-    padding:10px;
-    margin: 5px;
-    font-weight: bold;
+font-size: 17px;
+text-align: center;
+padding:10px;
+margin: 5px;
+font-weight: bold;
 }
 
 figure img:hover {
-    border: 1px solid gray;
-    border-radius: 10%;
-    background-color: #d7d8d9;
+border: 1px solid gray;
+border-radius: 10%;
+background-color: #d7d8d9;
 }
 
+/* Portfolio Section */
 
+/* Blog Section */
+#blog-wrapper {
+width: 99%;
+height: 100%;
+margin: 0 auto;
+}
+
+.blog-div {
+height: 100%;
+width: 95%;
+margin: 0 auto;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.blog-table {
+height: 100%;
+width: 98%;
+margin: 0 auto;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.blog-table img {
+height: 450px;
+width: 500px;
+margin: 0px 10px 20px 10px;
+}
+
+.blog-img-big img {
+height: 900px;
+width: 1000px;
+}
+
+/* Shadow effect for blog section wehen hover */
+
+.imagedropshadow {
+padding: 5px;
+border: solid 1px #EFEFEF;
+}
+
+a:hover img.imagedropshadow {
+border: solid 1px #CCC;
+-moz-box-shadow: 0px 0px 30px 3px #999;
+-webkit-box-shadow: 0px 0px 30px 3px #999;
+box-shadow: 0px 0px 30px 3px #999;}
+
+/* Footer Section */
+
+footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 0.8em;
+    padding-bottom: 10px;
+}
