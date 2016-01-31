@@ -1,8 +1,8 @@
 /* Body Wrapper */
 
 * {
-margin: 0px;
-padding: 0px;
+margin: 0%;
+padding: 0%;
 text-decoration: none;
 font-family: 'Roboto', sans-serif;
 font-weight: 400;
@@ -124,6 +124,7 @@ padding-bottom: 5px;
 margin: 10px;
 padding: 5px;
 margin-top: 40px;
+width: 100%;
 }
 
 #about-me-top {
@@ -211,8 +212,8 @@ margin-top: -30px;
 }
 
 .about-bottom-layout {
-    margin: auto;
-    text-align: center;
+margin: auto;
+text-align: center;
 }
 
 #education-header {
@@ -229,25 +230,55 @@ margin-bottom: 10px;
 }
 
 .about-bottom-layout img {
-    height: 300px;
-    width: 300px;
+height: 300px;
+width: 300px;
 }
 .about-bottom-layout figure {
-    display: inline-block;
+display: inline-block;
 }
 
 .about-bottom-layout figcaption {
-    font-size: 17px;
-    text-align: center;
-    padding:10px;
-    margin: 5px;
-    font-weight: bold;
+font-size: 17px;
+text-align: center;
+padding:10px;
+margin: 5px;
+font-weight: bold;
 }
 
 figure img:hover {
-    border: 1px solid gray;
-    border-radius: 10%;
-    background-color: #d7d8d9;
+border: 1px solid gray;
+border-radius: 10%;
+background-color: #d7d8d9;
 }
 
+/* Portfolio Section */
 
+/* Blog Section */
+#blog-wrapper {
+    width: 99%; /* Change this to % */
+    height: 100%; /* Change this to % */
+    margin: 0 auto;
+    border: 1px solid black; /* remove this */
+}
+
+.blog-div {
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+.blog-table {
+    height: 400px;
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+.border {
+outline:1px solid black;
+}
