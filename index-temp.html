@@ -24,7 +24,7 @@
                 <a class="button-header" href="#aboutme">About Me</a>
                 <a class="button-header" href="#portfolio">Portfolio</a>
                 <a class="button-header" href="#blog">Blog</a>
-                <a class="button-header" href="#">Contact</a>
+                <a class="button-header" href="#contact">Contact</a>
             </nav>
         </header>
 
@@ -41,6 +41,7 @@
         </section>
 
         <!-- About Me Section -->
+        <a name="aboutme" />
         <section id="about-me-wrapper">
             <section id="about-me-top">
                 <header class="about-top-layout">
@@ -79,7 +80,7 @@
                 </section>
             </section>
             <section id="about-me-bottom">
-                <p id="education-header">Education</p>
+                <p class="section-header">Education</p>
                 <header class="about-bottom-layout">
                     <figure>
                         <a href="http://devbootcamp.com/" target="_blank"><img src="imgs/dbc.png" alt="DBC" /></a>
@@ -105,43 +106,67 @@
         </section>
 
         <!-- Portfolio Section-->
+        <a name="portfolio" />
         <section id="portfolio-wrapper">
         </section>
 
-        <!-- Portfolio Section-->
+        <!-- Blog Section-->
+        <br>
+        <br>
+        <a name="blog"/>
+        <p class="section-header">Latest Blog Posts</p>
+        <div class="line-separator"></div>
         <section id="blog-wrapper">
             <section class="blog-div">
                 <table class="blog-table">
                     <tr>
                         <td>
-                           img1
+                            <a href="blog/git.html" target="_"><img class="imagedropshadow" src="imgs/blog1.jpg" alt="Git"></a>
                         </td>
-                        <td colspan="1" rowspan="2">img3</td>
+                        <td class="blog-img-big"colspan="1" rowspan="2"><a href="" target="_"><img class="imagedropshadow" src="imgs/blog3.jpg" alt="html and css"></a></td>
                     </tr>
                     <tr>
-                        <td>img2</td>
+                        <td><a href="blog/css-concepts.html" target="_"><img class="imagedropshadow" src="imgs/blog2.jpg" alt="css concepts"></a></td>
                     </tr>
                 </table>
             </section>
             <section class="blog-div">
                 <table class="blog-table">
                     <tr>
-                        <td>img4</td>
-                        <td>img5</td>
-                        <td>img6</td>
+                        <td><a href="blog/arrays-hashes.html" target="_"><img class="imagedropshadow" src="imgs/blog4.jpg" alt=""></a></td>
+                        <td><a href="blog/design_Accessibility.html" target="_"><img class="imagedropshadow" src="imgs/blog5.jpg" alt="web accessibility"></a></td>
+                        <td><a href="blog/enumerable-methods.html" target="_"><img class="imagedropshadow" src="imgs/blog6.jpg" alt="enumerable method ruby"></a></td>
                     </tr>
                 </table>
             </section>
+            <!-- Extra table for blogs
             <section class="blog-div">
                 <table class="blog-table">
                     <tr>
-                        <td colspan="1" rowspan="2">img7</td>
-                        <td>img8</td>
-                        <td>img9</td>
+                        <td colspan="1" rowspan="2"><a href="" target="_"><img src="" alt=""></a></td>
+                        <td><a href="" target="_"><img src="" alt=""></a></td>
+                        <td><a href="" target="_"><img src="" alt=""></a></td>
                     </tr>
                 </table>
-            </section>
+            </section> -->
         </section>
-
+        <!-- Contact Me Section -->
+        <p class="section-header">Contact Me</p>
+        <div class="line-separator"></div>
+        <br>
+        <section class="contact">
+            <script type="text/javascript" src="https://form.jotform.com/jsform/60163599545161"></script>
+        </section>
+        <br>
+        <!-- Footer Section -->
+        <footer>
+        <a href="mailto:info@sepandassadi.com"><img src="imgs/gmail-w.jpg" onmouseover="this.src='imgs/gmail-c.jpg'" onmouseout="this.src='imgs/gmail-w.jpg'" alt="email" /></a>
+        <a href="https://www.facebook.com/sepand.sam.assadi"><img src="imgs/fb-w.png" onmouseover="this.src='imgs/fb-c.png'" onmouseout="this.src='imgs/fb-w.png'" alt="facebook"></a>
+        <a href="https://www.linkedin.com/in/sepandassadi"><img src="imgs/link-w.jpg" onmouseover="this.src='imgs/link-c.png'" onmouseout="this.src='imgs/link-w.jpg'" alt="linkedin"></a>
+        <a href="https://twitter.com/sepandassadi"><img src="imgs/twitter-b.jpg" onmouseover="this.src='imgs/twitter-c.png'" onmouseout="this.src='imgs/twitter-b.jpg'" alt="twitter"></a>
+        <a href="https://plus.google.com/+SepandAssadi/posts"><img src="imgs/google-w.jpg" onmouseover="this.src='imgs/google-c.jpg'" onmouseout="this.src='imgs/google-w.jpg'" alt="google+"></a>
+        <a href="https://www.instagram.com/sepand.assadi/"><img src="imgs/insta-w.png" onmouseover="this.src='imgs/insta-c.jpg'" onmouseout="this.src='imgs/insta-w.png'" alt="google+"></a>
+        <p>Copyright© Sepand Assadi 2016</p>
+    </footer>
 </body>
 </html>

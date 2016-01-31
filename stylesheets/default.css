@@ -216,7 +216,7 @@ margin: auto;
 text-align: center;
 }
 
-#education-header {
+.section-header {
 text-align: center;
 margin: auto;
 width: 100%;
@@ -255,30 +255,57 @@ background-color: #d7d8d9;
 
 /* Blog Section */
 #blog-wrapper {
-    width: 99%; /* Change this to % */
-    height: 100%; /* Change this to % */
-    margin: 0 auto;
-    border: 1px solid black; /* remove this */
+width: 99%;
+height: 100%;
+margin: 0 auto;
 }
 
 .blog-div {
-    height: 100%;
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 1px solid black;
+height: 100%;
+width: 95%;
+margin: 0 auto;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 
 .blog-table {
-    height: 400px;
-    width: 98%;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 1px solid black;
+height: 100%;
+width: 98%;
+margin: 0 auto;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 
-.border {
-outline:1px solid black;
+.blog-table img {
+height: 450px;
+width: 500px;
+margin: 0px 10px 20px 10px;
+}
+
+.blog-img-big img {
+height: 900px;
+width: 1000px;
+}
+
+/* Shadow effect for blog section wehen hover */
+
+.imagedropshadow {
+padding: 5px;
+border: solid 1px #EFEFEF;
+}
+
+a:hover img.imagedropshadow {
+border: solid 1px #CCC;
+-moz-box-shadow: 0px 0px 30px 3px #999;
+-webkit-box-shadow: 0px 0px 30px 3px #999;
+box-shadow: 0px 0px 30px 3px #999;}
+
+/* Footer Section */
+
+footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 0.8em;
+    padding-bottom: 10px;
 }
