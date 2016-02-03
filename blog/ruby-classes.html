@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta Description for SEO  -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Sepand Assadi">
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <!-- Social Share Kit CSS -->
+    <link rel="stylesheet" href="../Packages/social-share-kit-1.0.6/dist/css/social-share-kit.css" type="text/css">
+    <!-- Social Share Kit JS -->
+    <script type="text/javascript" src="../Packages/social-share-kit-1.0.6/dist/js/social-share-kit.js"></script>
+    <link rel="stylesheet" href="../Packages/highlight/styles/monokai-sublime.css">
+    <script src="../Packages/highlight/highlight.pack.js"></script>
+    <title>Instance Variables | Blog</title>
+    <!-- Enter the name of the blog-->
+</head>
+<!-- Picture goes like this (if any)
+            <img src="../imgs/blog1.png" alt="Git Overview"> -->
+
+<body>
+    <section id="page-wrapper">
+        <section class="navbar">
+            <!-- Navigation Bar Section -->
+            <div id="nav-left">
+                <a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img src="../imgs/logo.png" alt="Logo" /></a>
+            </div>
+            <div id="nav-right">
+                <a id="home-button" class="button-header" href="#">Home</a>
+                <a class="button-header" href="#aboutme">About Me</a>
+                <a class="button-header" href="#portfolio">Portfolio</a>
+                <a class="button-header" href="#">Blog</a>
+                <a class="button-header" href="#">Contact</a>
+            </div>
+        </section>
+        <section class="main-wallpaper">
+            <!-- Enter the wallpaper picture-->
+            <div><img src="../imgs/blog7.png" alt=""></div>
+        </section>
+        <section class="blog-content-wrapper">
+            <div class="blog-title">
+                <!-- First Paragraph -->
+                <h1>Instance Variables and Class Variables</h1>
+                <!-- Title of Blog -->
+                <h3>By Sepand Assadi</h3>
+                <!-- By Who -->
+                <h4>February 3rd, 2016</h4>
+                <!-- Date -->
+            </div>
+            <div>
+                <div class="blog-left-nav">
+                    <p>In most programming languages, instance variables must be declared before they can be assigned. Ruby is the diametric opposite – instance variables cannot be declared at all. Instead, <b>an instance variable in Ruby comes into existence the first time it is assigned.</b></p>
+                    <br>
+                    <p>Creating an instance variable is as easy as taking a local variable and slapping a “@” on the beginning.</p>
+                    <br>
+                    <pre><code class="ruby">class Item
+  def initialize(title)
+    @title = title
+  end
+end
+
+item = Item.new('Chia Ruby')</code></pre>
+                    <br>
+                    <p>Underneath the hood, an instance variable is just a variable stored in self – the current instance. It might be tempting to assume that instance variables can be assigned with self.foo = like in Python. In fact, self.foo = would send the foo= message to self, and Ruby would try to call the corresponding method. This only works if the method exists.</p>
+                    <br>
+                    <pre><code class="ruby">class Item
+  def initialize(title)
+    self.title = title
+  end
+end
+
+item = Item.new('Chia Ruby') # => undefined method `title='...</code></pre>
+                    <br>
+                    <p>In order to access instance variables on the object outside of instance method definitions, getter and setter methods need to be defined.</p>
+                    <br>
+                    <pre><code class="ruby">class Item
+  def title=(t)
+    @title = t
+  end
+
+  def title
+    @title
+  end
+end
+
+item = Item.new
+puts item.title.inspect # => nil
+item.title = "Chia Ruby"
+puts item.title # => "Chia Ruby"</code></pre>
+                    <br>
+                    <p>The #initialize constructor has been left out here to show that it is optional. Also, notice that accessing an instance variable that has not been assigned does not raise an error. @title is nil when it is accessed before assignment. Part II will demonstrate how this can be used for lazy initialization.</p>
+                    <br>
+                    <p>Defining getters and setters over and over would get old pretty quickly. Fortunately, Ruby provides a trio of helper methods:</p>
+                    <ol>
+                        <li><span class="first-word">#attr_reader:</span> – define instance-level getters</li>
+                        <li><span class="first-word">#attr_writer</span> – define instance-level setters</li>
+                        <li><span class="first-word">#attr_accessor</span> – define both</li>
+                    </ol>
+                    <br>
+                    <p>Typically, these helpers go at the beginning of a class definition.</p>
+                    <br>
+                    <pre><code class="ruby">class Thing
+  attr_accessor :foo, :bar
+  attr_reader :baz
+
+  def initialize
+    @baz = "cat"
+  end
+end
+
+thing = Thing.new
+thing.foo = 1
+thing.bar = 2
+puts thing.baz # => "cat"</code></pre>
+                    <br>
+                    <p>A consequence of the fact that instance variables are just variables defined in self is that instance variables also work at the class level. After all, classes are just instances of Class. These are commonly referred to as <b>class instance variables.</b></p>
+                    <br>
+                    <pre><code class="ruby">class Parent
+  @@value = 1
+  def self.value
+    @@value
+  end
+end
+
+class Child < Parent
+  @@value = 2
+end
+
+puts Parent.value #=> 2 (because Child overwrote @@value)</code></pre>
+                    <br>
+                    <p>Actually, it’s a lot worse than that. Think about what happens when a class-hierarchy variable is assigned at the top level, where self is main – an instance of Object.</p>
+                    <br>
+                    <pre><code class="ruby">@@value = 3
+puts Parent.value # => 3</code></pre>
+                    <br>
+                    <p>Since basically every Ruby <b>object</b> descends from Object, it will have access to the same class-hierarchy variables as <b>Object</b>. So, class variables are potentially <b>global variables</b>. This makes them highly unpredictable and prone to misuse.</p>
+                    <br>
+                    <br>
+                </div>
+                <div class="blog-right-nav">
+                    <div class="blog-right-nav">
+                        <script type="text/javascript">
+                        SocialShareKit.init({
+                            url: 'http://thinktankshark.github.io/index.html#blog',
+                            twitter: {
+                                url: 'http://thinktankshark.github.io/index.html#blog',
+                                via: '@sepandassadi'
+                            }
+                        });
+                        </script>
+                        <div class="ssk-group ssk-sticky ssk-right ssk-center ssk-lg">
+                            <a href="" class="ssk ssk-facebook"></a>
+                            <a href="" class="ssk ssk-twitter"></a>
+                            <a href="" class="ssk ssk-google-plus"></a>
+                            <a href="" class="ssk ssk-pinterest"></a>
+                            <a href="" class="ssk ssk-tumblr"></a>
+                        </div>
+                    </div>
+        </section>
+        <footer class="footer">
+            <!-- Footer Section -->
+            <a href="mailto:info@sepandassadi.com"><img src="../imgs/gmail-w.jpg" onmouseover="this.src='../imgs/gmail-c.jpg'" onmouseout="this.src='../imgs/gmail-w.jpg'" alt="email" /></a>
+            <a href="https://www.facebook.com/sepand.sam.assadi"><img src="../imgs/fb-w.png" onmouseover="this.src='../imgs/fb-c.png'" onmouseout="this.src='../imgs/fb-w.png'" alt="facebook"></a>
+            <a href="https://www.linkedin.com/in/sepandassadi"><img src="../imgs/link-w.jpg" onmouseover="this.src='../imgs/link-c.png'" onmouseout="this.src='../imgs/link-w.jpg'" alt="linkedin"></a>
+            <a href="https://twitter.com/sepandassadi"><img src="../imgs/twitter-b.jpg" onmouseover="this.src='../imgs/twitter-c.png'" onmouseout="this.src='../imgs/twitter-b.jpg'" alt="twitter"></a>
+            <a href="https://plus.google.com/+SepandAssadi/posts"><img src="../imgs/google-w.jpg" onmouseover="this.src='../imgs/google-c.jpg'" onmouseout="this.src='../imgs/google-w.jpg'" alt="google+"></a>
+            <a href="https://www.instagram.com/sepand.assadi/"><img src="../imgs/insta-w.png" onmouseover="this.src='../imgs/insta-c.jpg'" onmouseout="this.src='../imgs/insta-w.png'" alt="google+"></a>
+            <p>Copyright© Sepand Assadi 2016</p>
+        </footer>
+    </section>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+
+</body>
+
+</html>
