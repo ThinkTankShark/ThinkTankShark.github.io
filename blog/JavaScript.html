@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta Description for SEO  -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Sepand Assadi">
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <!-- Social Share Kit CSS -->
+    <link rel="stylesheet" href="../Packages/social-share-kit-1.0.6/dist/css/social-share-kit.css" type="text/css">
+    <!-- Social Share Kit JS -->
+    <script type="text/javascript" src="../Packages/social-share-kit-1.0.6/dist/js/social-share-kit.js"></script>
+    <link rel="stylesheet" href="../Packages/highlight/styles/monokai-sublime.css">
+    <script src="../Packages/highlight/highlight.pack.js"></script>
+
+    <title>JavaScript Vs. Ruby | Blog</title>
+</head>
+
+<!-- Using the syntax below to embed coding to page
+    <pre><code class="ruby"></code></pre> -->
+
+    <!-- Picture goes like this (if any)
+            <img src="../imgs/blog1.png" alt="Git Overview"> -->
+<body>
+    <section id="page-wrapper">
+        <section class="navbar">
+            <!-- Navigation Bar Section -->
+            <div id="nav-left">
+                <a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img src="../imgs/logo.png" alt="Logo" /></a>
+            </div>
+            <div id="nav-right">
+                <a id="home-button" class="button-header" href="#">Home</a>
+                <a class="button-header" href="#aboutme">About Me</a>
+                <a class="button-header" href="#portfolio">Portfolio</a>
+                <a class="button-header" href="#">Blog</a>
+                <a class="button-header" href="#">Contact</a>
+            </div>
+        </section>
+        <section class="main-wallpaper">
+            <!-- Enter the wallpaper picture-->
+            <div><img src="../imgs/javascript.png" alt=""></div>
+        </section>
+        <section class="blog-content-wrapper">
+            <div class="blog-title">
+                <!-- First Paragraph -->
+                <h1>Ruby vs Javascript</h1>
+                <!-- Title of Blog -->
+                <h3>By Sepand Assadi</h3>
+                <!-- By Who -->
+                <h4>February 12th, 2016</h4>
+                <!-- Date -->
+            </div>
+            <div>
+                <div class="blog-left-nav">
+                    <p>This is simply an overview for those of you with little or no programming experience to have a basic overview of the major differences between Javascript and Ruby</p>
+                    <br>
+                    <h1>Historical Differences</h1>
+                    <br>
+                    <p>Since the first language I learned was Ruby, I will start with that. Ruby was developed by a group of people, leading the design team Osaka born Yukihiro Matsumoto . He, and I quote, “really wanted a genuine object-oriented with easy-to-use scripting language” that Python just didnt have but also taking influences from Perl which he really liked but referred to it as a “Toy Language”. It first appeared around the year of my birth 1995 and now is on version 2.2.0 after 20 years.</p>
+                    <br>
+                    <p>Javascript on the other hand was developed by Brenden Ech, in a trivial 10 days also in 1995. Ech was initially hired by Netscape Communications (Now subsidiary of AOL) to put Scheme in the browser to compete with Microsoft for adoption of platforms within the browser, instead he made what is known then as Livescript but was quickly renamed to Javascript . Within a year Javascript gained widespread usage as a scripting language and was adopted by Microsoft’s Internet Explorer 3.0 in 1996.</p>
+                    <br>
+                    <h1>Syntactic Differences</h1>
+                    <br>
+                    <p>So as some people who are familiar with programming in general will know of the concept of : Variables, Hashes , Semicolons, Methods, For Loops , While Loops, Conditionals and Classes. Im going to go over how they are called in both languages so you can see the difference.</p>
+<br>
+<h2>Variables:</h2>
+<p>In ruby variables are relatively easy to set, you just have to type in</p>
+<pre><code class="ruby">variable_name = variable_value</code></pre>
+<br>
+<p>In Javascript its a little bit longer but essentially the samething.</p>
+<pre><code class="ruby">var variable_name = variable_value</code></pre>
+<br>
+<h2>Hashes:</h2>
+<p>In ruby hashes are referred to like so:</p>
+<pre><code class="ruby">hash_name = { hash_key: hash_value , sechash_key: sechash_value}</code></pre>
+<br>
+<p>In Javascript hashes are referred as Objects , the “Key” in Ruby is simply a variable.</p>
+<pre><code class="ruby">var hash_name = { hash_key: hash_value , sechash_key: sechash_value</code></pre>
+<br>
+<p>You can call upon the hash to find the value of a key in ruby by using</p>
+<pre><code class="ruby"hash_name[:hash_key] —-> hash_value></code></pre>
+<br>
+<p>In Javascript you can call the “Object” to get the value of the key , which would look like so:</p>
+<pre><code class="ruby">hash_name.hash_key —-> hash_value</code></pre>
+<br>
+<h2>The semicolon(;):</h2>
+<p>Semicolons are not obligitory in Ruby , in fact they are not an option at all there are no semicolons where there is a statement in ruby.
+However in javascript Semicolons are necessary where there is more than 1 statement on a line. However do not use them after a curly bracket</p>
+<pre><code class="ruby">var i = 0; i++        // <-- semicolon obligatory
+                      //     (but optional before newline)
+var i = 0             // <-- semicolon optional
+    i++               // <-- semicolon optional
+// NO semicolons after }:
+if  (...) {...} else {...}
+for (...) {...}
+while (...) {...}</code></pre>
+<br>
+<p>Also don’t use them after the round bracket of an if, for, while or switch statement. Its just redundant..</p>
+<pre><code class="ruby">if (0 === 1); { alert("hi") }
+
+// equivalent to:
+
+if (0 === 1) /*do nothing*/ ;
+alert ("hi");</code></pre>
+<br>
+<h2>Methods:</h2>
+<p>So methods within Ruby that do not take an argument , eg. “.reverse” . Do not require parenthesis.
+</p>
+<pre><code class="ruby">"string".reverse ---> "gnirts"</code></pre>
+<p>However within javascript almost all methods require parenthesis.</p>
+<pre><code class="ruby">"string".split("").reverse().join("") ---> "gnirts"</code></pre>
+<br>
+<h2>For Loops:</h2>
+<p>In Ruby for loops are relatively less tiresome to write</p>
+<pre><code class="ruby">for varibale_name != variable_value do
+ #actions
+ end
+end</code></pre>
+<br>
+<p>So remember the exception I was talking about with semicolons, well here it is. In Javascript you have semi colons within for loops it is written as:</p>
+<pre><code class="ruby">for (var i=0; i !== var_value; i++)  {/*actions*/}          // correct
+for (var i=0; i !== var_value; i++;) {/*actions*/}          // SyntaxError</code></pre>
+<br>
+<h2>While Loops:</h2>
+<p>Ruby while loops are also relatively less cumbersome than Javascript while loops.
+</p>
+<pre><code class="ruby">while (x < 10)
+  #actions
+  x +=1
+end</code></pre>
+<br>
+<p>Within Javascript we can see much more semicolons and also a tonne more curly brackets of all kinds. In addition the incrementing by +1 is different in Ruby , where it just takes you having to increase it by +=1 .</p>
+<pre><code class="ruby">while (x<10) {
+ //actions;
+x++;
+}</code></pre>
+<br>
+<h2>Functions:</h2>
+<p>Functions in Javascript are known as reference types so essentially If I were to go ahead and call a function by saying</p>
+<pre><code class="ruby">function sayhello(name) {
+return “ Helllo “ + name
+}</code></pre>
+<br>
+<p>where as in Ruby functions are defined like so</p>
+<pre><code class="ruby">def sayhello(name)
+ p “Hello” + name.to_s
+end</code></pre>
+<br>
+<p>For more information about Ruby Vs. JavaSceipt differences, please visit <a href="http://blog.flatironschool.com/javascript-vs-ruby/" target="_">this link.</a></p>
+
+
+                    <!-- Second Paragraph -->
+                </div>
+                <div class="blog-right-nav">
+                    <div class="blog-right-nav">
+                        <script type="text/javascript">
+                        SocialShareKit.init({
+                            url: 'http://thinktankshark.github.io/index.html#blog',
+                            twitter: {
+                                url: 'http://thinktankshark.github.io/index.html#blog',
+                                via: '@sepandassadi'
+                            }
+                        });
+                        </script>
+                        <div class="ssk-group ssk-sticky ssk-right ssk-center ssk-lg">
+                            <a href="" class="ssk ssk-facebook"></a>
+                            <a href="" class="ssk ssk-twitter"></a>
+                            <a href="" class="ssk ssk-google-plus"></a>
+                            <a href="" class="ssk ssk-pinterest"></a>
+                            <a href="" class="ssk ssk-tumblr"></a>
+                        </div>
+                    </div>
+        </section>
+        <footer class="footer">
+            <!-- Footer Section -->
+            <a href="mailto:info@sepandassadi.com"><img src="../imgs/gmail-w.jpg" onmouseover="this.src='../imgs/gmail-c.jpg'" onmouseout="this.src='../imgs/gmail-w.jpg'" alt="email" /></a>
+            <a href="https://www.facebook.com/sepand.sam.assadi"><img src="../imgs/fb-w.png" onmouseover="this.src='../imgs/fb-c.png'" onmouseout="this.src='../imgs/fb-w.png'" alt="facebook"></a>
+            <a href="https://www.linkedin.com/in/sepandassadi"><img src="../imgs/link-w.jpg" onmouseover="this.src='../imgs/link-c.png'" onmouseout="this.src='../imgs/link-w.jpg'" alt="linkedin"></a>
+            <a href="https://twitter.com/sepandassadi"><img src="../imgs/twitter-b.jpg" onmouseover="this.src='../imgs/twitter-c.png'" onmouseout="this.src='../imgs/twitter-b.jpg'" alt="twitter"></a>
+            <a href="https://plus.google.com/+SepandAssadi/posts"><img src="../imgs/google-w.jpg" onmouseover="this.src='../imgs/google-c.jpg'" onmouseout="this.src='../imgs/google-w.jpg'" alt="google+"></a>
+            <a href="https://www.instagram.com/sepand.assadi/"><img src="../imgs/insta-w.png" onmouseover="this.src='../imgs/insta-c.jpg'" onmouseout="this.src='../imgs/insta-w.png'" alt="google+"></a>
+            <p>Copyright© Sepand Assadi 2016</p>
+        </footer>
+    </section>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+</body>
+
+</html>
