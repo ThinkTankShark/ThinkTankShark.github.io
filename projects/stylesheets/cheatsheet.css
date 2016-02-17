@@ -1,0 +1,200 @@
+@import url("../../stylesheets/template.css");
+
+/* Page Settings
+Setting below will control the whole page */
+
+.page-wrapper {
+    font-family: Open Sans;
+}
+
+.blog-content-wrapper {
+    padding: 280px 20px 10px 100px;
+}
+
+
+/* Blog Section */
+
+/* This is going to be the blog title, name of author and date */
+
+.blog-title {
+    text-align: center;
+    margin: auto;
+}
+
+.blog-title h1 {
+    font-size: 3em;
+    line-height: 2.7em;
+}
+
+.line-separator{
+height:6px;
+background:#69f0ae;
+width: 8%;
+text-align: center;
+margin: auto;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.language-icon {
+    margin-left: 300px;
+    display: inline;
+}
+
+.language-icon img{
+    height: 140px;
+    width: 140px;
+    padding-bottom: 40px;
+}
+
+.blog-left-nav {
+    float: left;
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 350px;
+    padding-top: 30px;
+    display: block;
+    position: relative;
+    text-align: justify;
+}
+
+#html h1{
+font-size: 2.2em;
+padding-bottom: 5px padding-top: 0px;
+line-height: 2em;
+margin-top: -250px;
+margin-left: 280px;
+color: #f0462b;
+}
+
+#css h1{
+font-size: 2.2em;
+padding-bottom: 5px padding-top: 0px;
+line-height: 2em;
+margin-left: 280px;
+color: #0082fa;
+}
+
+#js h1{
+font-size: 2.2em;
+padding-bottom: 5px padding-top: 0px;
+line-height: 2em;
+margin-left: 280px;
+color: #e5a228;
+}
+
+#ruby h1{
+font-size: 2.2em;
+padding-bottom: 5px padding-top: 0px;
+line-height: 2em;
+margin-left: 280px;
+color: #bd1000;
+}
+
+#git h1{
+font-size: 2.2em;
+padding-bottom: 5px padding-top: 0px;
+line-height: 2em;
+margin-left: 280px;
+color: #f34f29;
+}
+
+#github h1{
+font-size: 2.2em;
+padding-bottom: 5px padding-top: 0px;
+line-height: 2em;
+margin-left: 280px;
+color: #0d2636;
+}
+
+#sql h1{
+font-size: 2.2em;
+padding-bottom: 5px padding-top: 0px;
+line-height: 2em;
+margin-left: 280px;
+color: #6f2d6e;
+}
+
+#markdown h1{
+font-size: 2.2em;
+padding-bottom: 5px padding-top: 0px;
+line-height: 2em;
+margin-left: 280px;
+color: #412159;
+}
+
+#python h1{
+font-size: 2.2em;
+padding-bottom: 5px padding-top: 0px;
+line-height: 2em;
+margin-left: 280px;
+color: #ffd332;
+}
+
+.blog-left-nav h1 {
+    font-size: 2.2em;
+    padding-bottom: 5px padding-top: 0px;
+    line-height: 2em;
+}
+
+.blog-left-nav p {
+    font-size: 1.4em;
+    text-align: justify;
+    line-height: 1.3em;
+}
+
+
+.blog-right-nav {
+    float: rblog-left-navight;
+    width: 10%;
+    display: relative;
+    padding-top: 400px;
+}
+
+
+/*  Footer Section */
+
+.footer {
+    clear: both;
+    background-color: White;
+    color: black;
+    font-family: Open Sans;
+    font-size: 0.8em;
+    float: bottom;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+
+/* Using for Embedded Coding Syntax  */
+
+pre {
+    text-align: left;
+    margin-left: auto;
+    padding-left: 0px;
+    margin-bottom: 20px;
+}
+
+
+/*   */
+
+
+/*   */
+
+
+/*   */
+
+
+/*   */
+
+
+/*   */
+
+
+/*   */
+
+
+/*   */
