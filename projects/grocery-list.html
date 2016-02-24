@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta Description for SEO  -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Sepand Assadi">
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/grocerylist.css">
+    <script type="text/javascript" src="js/grocerylist.js"></script>
+
+    <!-- Enter the name of the blog-->
+    <title>Grocery List ToDo</title>
+</head>
+
+<body>
+    <section id="page-wrapper">
+        <section class="navbar">
+            <!-- Navigation Bar Section -->
+            <div id="nav-left">
+                <a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img src="../imgs/logo.png" alt="Logo" /></a>
+            </div>
+            <div id="nav-right">
+                <a id="home-button" class="button-header" href="#">Home</a>
+                <a class="button-header" href="#aboutme">About Me</a>
+                <a class="button-header" href="#portfolio">Portfolio</a>
+                <a class="button-header" href="#">Blog</a>
+                <a class="button-header" href="#">Contact</a>
+            </div>
+        </section>
+        <section id="main-wrap">
+          <form name="createList">
+            <p>
+                <label class="label">Please Enter The List Name To Create:</label>
+                <input type="text" class="input" name="listInput">
+            </p>
+            <br>
+
+            <p>
+                <label class="label">Please Enter The Item Name:</label>
+                <input type="text" class="input">
+            </p>
+            <br>
+            <p>
+                <label class="label">Please Enter the Quantity:</label>
+                <input type="text" class="input">
+            </p>
+            <p>
+                <input type="button" value="Create List" class="input-button" onClick="createNewList()" name="createList">
+                <input type="button" value="Add Item" class="input-button" onClick="addItem()">
+                <input type="button" value="Remove Item" class="input-button" onClick="removeItem()">
+                <input type="button" value="Update Item" class="input-button" onClick="updateQuantity()">
+                <input type="button" value="Print List" class="input-button" onClick="printItems()">
+            </p>
+        </form>
+        </section>
+        <footer class="footer">
+            <!-- Footer Section -->
+            <a href="mailto:info@sepandassadi.com"><img src="../imgs/gmail-w.jpg" onmouseover="this.src='../imgs/gmail-c.jpg'" onmouseout="this.src='../imgs/gmail-w.jpg'" alt="email" /></a>
+            <a href="https://www.facebook.com/sepand.sam.assadi"><img src="../imgs/fb-w.png" onmouseover="this.src='../imgs/fb-c.png'" onmouseout="this.src='../imgs/fb-w.png'" alt="facebook"></a>
+            <a href="https://www.linkedin.com/in/sepandassadi"><img src="../imgs/link-w.jpg" onmouseover="this.src='../imgs/link-c.png'" onmouseout="this.src='../imgs/link-w.jpg'" alt="linkedin"></a>
+            <a href="https://twitter.com/sepandassadi"><img src="../imgs/twitter-b.jpg" onmouseover="this.src='../imgs/twitter-c.png'" onmouseout="this.src='../imgs/twitter-b.jpg'" alt="twitter"></a>
+            <a href="https://plus.google.com/+SepandAssadi/posts"><img src="../imgs/google-w.jpg" onmouseover="this.src='../imgs/google-c.jpg'" onmouseout="this.src='../imgs/google-w.jpg'" alt="google+"></a>
+            <a href="https://www.instagram.com/sepand.assadi/"><img src="../imgs/insta-w.png" onmouseover="this.src='../imgs/insta-c.jpg'" onmouseout="this.src='../imgs/insta-w.png'" alt="google+"></a>
+            <p>Copyright© Sepand Assadi 2016</p>
+        </footer>
+        </section>
+</body>
+</html>
