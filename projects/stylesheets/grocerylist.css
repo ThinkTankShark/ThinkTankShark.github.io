@@ -83,9 +83,10 @@ color: black;
 #main-wrap {
     margin: 0 auto;
     margin-top: 100px;
-    height: 1500px;
+    height: 500px;
     width: 90%;
-    border: 1px solid black;
+    border: 1px dashed black;
+    border-radius: 5%;
 }
 
 .input {
@@ -107,6 +108,11 @@ height: 50px;
 font-weight:bold;
 border: solid #666 1px;
 font-size: 14px;
+}
+
+#results {
+    margin: 30px;
+    font-size: 1.4em;
 }
 
 /*  Footer Section */

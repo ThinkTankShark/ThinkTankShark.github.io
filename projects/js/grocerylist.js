@@ -1,16 +1,19 @@
 //Create a new list
+var i = 0;
 function createNewList() {
  var listName = document.createList.listInput.value;
+ i++;
+var listCreated = '<div id="item' + i + '"><input type="checkbox" />' + listName + '</div>';
+document.getElementById("createNewList").innerHTML += listCreated;
 
-
-
-
- alert(list);
- alert(listName + " Has Been Create");
+ alert(listName + " List Has Been Created");
 }
 
 //Add items to list
 function addItem(item) {
+
+
+
   alert(item + " Just Added");
 }
 
