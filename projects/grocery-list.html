@@ -15,7 +15,7 @@
     <title>Grocery List ToDo</title>
 </head>
 
-<body>
+<body onLoad="hiddenItems()">
     <section id="page-wrapper">
         <section class="navbar">
             <!-- Navigation Bar Section -->
@@ -37,7 +37,7 @@
                 <input type="text" class="input" name="listInput">
             </p>
             <br>
-
+            <div id="itemTextField">
             <p>
                 <label class="label">Please Enter The Item Name:</label>
                 <input type="text" class="input">
@@ -47,8 +47,9 @@
                 <label class="label">Please Enter the Quantity:</label>
                 <input type="text" class="input">
             </p>
+            </div>
             <p>
-                <input type="button" value="Create List" class="input-button" onClick="createNewList()" name="createList">
+                <input type="button" value="Create List" class="input-button" onClick="createNewList()" name="createListButton">
                 <input type="button" value="Add Item" class="input-button" onClick="addItem()">
                 <input type="button" value="Remove Item" class="input-button" onClick="removeItem()">
                 <input type="button" value="Update Item" class="input-button" onClick="updateQuantity()">

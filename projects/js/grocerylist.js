@@ -1,12 +1,13 @@
 //Create a new list
-var i = 0;
+function hiddenItems() {
+
+  document.getElementById("itemTextField").style.visibility = "hidden";
+}
+
 function createNewList() {
  var listName = document.createList.listInput.value;
- i++;
-var listCreated = '<div id="item' + i + '"><input type="checkbox" />' + listName + '</div>';
-document.getElementById("createNewList").innerHTML += listCreated;
-
  alert(listName + " List Has Been Created");
+ document.getElementById("itemTextField").style.visibility = "visible";
 }
 
 //Add items to list
