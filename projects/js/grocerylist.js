@@ -12,9 +12,6 @@ function createNewList() {
 
 //Add items to list
 function addItem(item) {
-
-
-
   alert(item + " Just Added");
 }
 
