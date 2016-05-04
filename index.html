@@ -1,200 +1,391 @@
 <!DOCTYPE html>
-<html>
-
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Sepand Assadi Website - Full Stack Developer">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript, Ruby, Fullstack, Front-End, Back-End, Software Developer">
-    <meta name="author" content="Sepand Assadi">
-    <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico" />
-   <link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
-    <link rel="stylesheet" type="text/css" media="all" href="Packages/960-Grid-System-master/code/css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="Packages/960-Grid-System-master/codecss/text.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="Packages/960-Grid-System-master/codecss/960.css" />
-    <!-- My JavaScript -->
-    <script type="text/javascript" src="js/main.js"></script>
-    <!-- Get jQuery Library -->
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script type="text/javascript" src="jquery_example.js"></script>
+	<meta charset="utf-8">
 
-    <script type="text/javascript" src="Packages/restive.js-master/restive.min.js"></script>
-  <script type="text/javascript">
-      $(document).ready(function () {
-            $('selector').restive(options);
-            $
-      });
-</script>
-    <title>Sepand Assadi | SF, CA</title>
+	<title>Persona | Minimal Resume</title>
+
+	<!-- Behavioral Meta Data -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Core Meta Data -->
+	<meta name="author" content="Aether-Themes">
+	<meta name="description" content="Persona. Minimal resume and CV landing page.">
+	<meta name="keywords" content="template,CV,resume,landing page,minimal,responsive,html5,css3,jquery">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.png" type="image/png">
+
+	<!-- Apple Touch Icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57-precomposed.png">
+
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/framework.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	
+	<!-- Colors -->
+	<link rel="stylesheet" type="text/css" href="css/colors/ruby-red.css" media="screen">
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/colors/aqua-blue.css" media="screen"> -->
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/colors/mint-green.css" media="screen"> -->
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/colors/rose-pink.css" media="screen"> -->
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/colors/sunflower-yellow.css" media="screen"> -->
+
+	<!-- Javascript -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery.js"></script>
 </head>
-
 <body>
-    <div class="container_12">
-    <section id="page-wrapper">
-        <header class="navbar">
-            <!-- Navigation Bar Section -->
-            <nav id="nav-left">
-                <a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img src="imgs/logo.png" alt="Logo" /></a>
-            </nav>
-            <nav id="nav-right">
-                <a id="home-button" class="button-header" href="#">Home</a>
-                <a class="button-header" href="#aboutme">About Me</a>
-                <a class="button-header" href="#portfolio">Portfolio</a>
-                <a class="button-header" href="#blog">Blog</a>
-                <a class="button-header" href="#contact">Contact</a>
-            </nav>
-        </header>
+	<!-- Begin Pageloader -->
+	<div id="pageloader">
+		<!-- Content -->
+		<div class="pageloader-content">
+			<img src="images/loading.gif" alt="">
+			<h6>loading</h6>
+		</div><!-- END Content -->
+	</div><!-- END Pageloader -->
 
-        <!-- Wallpaper Section -->
-        <section class="wallpaper">
-            <img src="imgs/wallpaper.jpg">
-            <nav>
-                <a href="#aboutme">
-                    <div id="bottom-point">
-                        <p id="arrow">&darr;</p>
-                    </div>
-                </a>
-            </nav>
-        </section>
+	<!-- Sticky Nav -->
+	<header>
+		<!-- Container -->
+		<div class="container">
+			<div class="row header-inner">
 
-        <!-- About Me Section -->
-        <a name="aboutme" />
-        <section id="about-me-wrapper">
-            <section id="about-me-top">
-                <header class="about-top-layout">
-                    <p>i'm Sepand Assadi, Full-Stack Developer!<p>
-                </header>
-                <section class="about-top-layout">
-                    <img src="imgs/aboutme-pic.jpg" alt="My Picture">
-                </section>
-                <div class="line-separator"></div>
-                <section class="about-top-layout">
-                    <h4>Software Engineer with hands-on experience in all levels of testing, including performance, functional, integration, system, regression, and user acceptance testingSupportive and enthusiastic team player dedicated to streamlining processes and efficiently resolving project issues.</h4>
-                </section>
-                <section class="about-top-layout">
-                    <div id="social-media-icons">
-                            <div>
-                                <a href="https://www.facebook.com/sepand.sam.assadi" target="_blank"><img class="sm-icons" src="imgs/fb.jpg" alt="Facebook" /></a>
-                            </div>
-                            <div>
-                                <a href="https://twitter.com/sepandassadi" target="_blank"><img class="sm-icons" src="imgs/twitter.jpg" alt="Twitter" /></a>
-                            </div>
-                            <div>
-                                <a href="https://www.linkedin.com/in/sepandassadi" target="_blank"><img class="sm-icons" src="imgs/linkedin.jpg" alt="LinkedIn" /></a>
-                            </div>
-                            <div>
-                                <a href="https://github.com/ThinkTankShark" target="_blank"><img class="sm-icons" src="imgs/github.jpg" alt="Github" /></a>
-                            </div>
-                            <div>
-                                <a href="mailto:info@sepandassadi.com?Subject=Reaching Out From Your Website"><img class="sm-icons" src="imgs/gmail.jpg" alt="Gmail" /></a>
-                            </div>
-                            <!-- <div id="button">
-                                <form method="get" action="imgs/SepandAssadi-Resume.pdf">
-                                    <button type="submit"> </button>
-                                </form>
-                            </div> -->
-                    </div>
-                </section>
-            </section>
-            <section id="about-me-bottom">
-                <p class="section-header">Education</p>
-                <header class="about-bottom-layout">
-                    <figure>
-                        <a href="http://devbootcamp.com/" target="_blank"><img src="imgs/dbc.png" alt="DBC" /></a>
-                        <figcaption>Full-Stack Coding Bootcamp</figcaption>
-                        <figcaption>January 2015 - Present</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="http://web.mit.edu/" target="_blank"><img src="imgs/mit2.png" alt="MIT" /></a>
-                        <figcaption>Certificate of Completion in Python: MIT University</figcaption>
-                        <figcaption>June 2015 - August 2015</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="http://ww1.emu.edu.tr/en/" target="_blank"><img src="imgs/emu.png" alt="EMU" /></a>
-                        <figcaption>BS in Information Technology (I.T)</figcaption>
-                        <figcaption>February 2003 - January 2007</figcaption>
-                    </figure>
+				<!-- Logo -->
+				<div class="col-xs-6 col-lg-2">
+					<img class="logo has-retina" src="images/logo.png" alt="Persona">
+				</div>
 
-                </header>
-                <section class="about-bottom-layout">
+				<!-- Nav Button -->
+				<div class="menu-button">
+					<span class="before"></span>
+					<span class="main"></span>
+					<span class="after"></span>
+				</div>
 
-                </section>
-            </section>
-        </section>
+				<!-- Navigation -->
+				<nav class="col-xs-12 col-lg-2 col-lg-offset-8">
+					<ul id="side-nav">
+						<li><a href="#section1">About</a></li>
+						<li><a href="#section2">Work</a></li>
+						<li class="offset"><a href="#section3">Experience</a></li>
+						<li><a href="#section4">Clients</a></li>
+						<li><a href="#section5">Contact</a></li>
+						<li><a id="top" href="#">Top</a></li>
+					</ul>
+				</nav><!-- END Navigation -->
+			</div>
+		</div><!-- END Container -->
+	</header><!-- END Sticky Nav -->
 
-        <!-- Portfolio Section-->
-        <a name="portfolio" />
-        <section id="portfolio-wrapper">
-            <p class="section-header">Portfolio</p>
-            <div class="line-separator"></div>
-            <br>
-        </section>
+	<!-- Begin Hero -->
+	<section class="hero">
+		<div class="container">
+			<!-- Hero Content -->
+			<div class="row hero-content" data-0="opacity: 1; transform: translate3d(0px, 0px, 0px);" data-top-bottom="opacity: 0; transform: translate3d(0px, 300%, 0px);">
+				<!-- Logo -->
+				<div class="col-xs-12 col-lg-2">
+					<img class="logo has-retina" src="images/logo.png" alt="Persona">
+				</div>
 
-        <!-- Blog Section-->
-        <br>
-        <br>
-        <a name="blog"/>
-        <p class="section-header">Latest Blog Posts</p>
-        <div class="line-separator"></div>
-        <section id="blog-wrapper">
-            <section class="blog-div">
-                <table class="blog-table">
-                    <tr>
-                        <td>
-                            <a href="blog/git.html" target="_"><img class="imagedropshadow" src="imgs/blog1.jpg" alt="Git"></a>
-                        </td>
-                        <td class="blog-img-big"colspan="1" rowspan="2"><a href="" target="_"><img class="imagedropshadow" src="imgs/blog3.jpg" alt="html and css"></a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="blog/css-concepts.html" target="_"><img class="imagedropshadow" src="imgs/blog2.jpg" alt="css concepts"></a></td>
-                    </tr>
-                </table>
-            </section>
-            <section class="blog-div">
-                <table class="blog-table">
-                    <tr>
-                        <td><a href="blog/arrays-hashes.html" target="_"><img class="imagedropshadow" src="imgs/blog4.jpg" alt=""></a></td>
-                        <td><a href="blog/design_Accessibility.html" target="_"><img class="imagedropshadow" src="imgs/blog5.jpg" alt="web accessibility"></a></td>
-                        <td><a href="blog/enumerable-methods.html" target="_"><img class="imagedropshadow" src="imgs/blog6.jpg" alt="enumerable method ruby"></a></td>
-                    </tr>
-                </table>
-            </section>
-            <!-- Extra table for blogs
-            <section class="blog-div">
-                <table class="blog-table">
-                    <tr>
-                        <td colspan="1" rowspan="2"><a href="" target="_"><img src="" alt=""></a></td>
-                        <td><a href="" target="_"><img src="" alt=""></a></td>
-                        <td><a href="" target="_"><img src="" alt=""></a></td>
-                    </tr>
-                </table>
-            </section> -->
-        </section>
-        <!-- Contact Me Section -->
-        <p class="section-header">Contact Me</p>
-        <div class="line-separator"></div>
-        <br>
-        <section class="contact">
-            <script type="text/javascript" src="https://form.jotform.com/jsform/60163599545161"></script>
-        </section>
-        <br>
-        <!-- Footer Section -->
-        <footer>
-        <a href="mailto:info@sepandassadi.com"><img src="imgs/gmail-w.jpg" onmouseover="this.src='imgs/gmail-c.jpg'" onmouseout="this.src='imgs/gmail-w.jpg'" alt="email" /></a>
-        <a href="https://www.facebook.com/sepand.sam.assadi"><img src="imgs/fb-w.png" onmouseover="this.src='imgs/fb-c.png'" onmouseout="this.src='imgs/fb-w.png'" alt="facebook"></a>
-        <a href="https://www.linkedin.com/in/sepandassadi"><img src="imgs/link-w.jpg" onmouseover="this.src='imgs/link-c.png'" onmouseout="this.src='imgs/link-w.jpg'" alt="linkedin"></a>
-        <a href="https://twitter.com/sepandassadi"><img src="imgs/twitter-b.jpg" onmouseover="this.src='imgs/twitter-c.png'" onmouseout="this.src='imgs/twitter-b.jpg'" alt="twitter"></a>
-        <a href="https://plus.google.com/+SepandAssadi/posts"><img src="imgs/google-w.jpg" onmouseover="this.src='imgs/google-c.jpg'" onmouseout="this.src='imgs/google-w.jpg'" alt="google+"></a>
-        <a href="https://www.instagram.com/sepand.assadi/"><img src="imgs/insta-w.png" onmouseover="this.src='imgs/insta-c.jpg'" onmouseout="this.src='imgs/insta-w.png'" alt="google+"></a>
-        <p>Copyright© Sepand Assadi 2016</p>
-    </footer>
-    <script type="text/javascript">
-        // When the document is ready execute the JQuery
-        $("document").ready(function() {
+				<!-- Intro -->
+				<div class="col-xs-10 col-sm-9 col-lg-7">
+					<h2>introduction</h2>
+					<h1>Hi! I am <span class="highlight">Persona</span>. Designer &amp; Art Director. Based in New York.</h1>
+					<a href="#section1" class="scroll-to"></a>
+				</div>
+			</div><!-- END Hero Content -->
+		</div><!-- END Container -->
+	</section><!-- END Hero -->
+	
 
-        }); <!-- End of JQuery Code -->
-    </script>
-    </div>
+	<div class="container">
+		<!-- About -->
+		<section id="section1" class="padded-top">
+
+			<!-- Content -->
+			<div class="row">
+				<div class="col-xs-12 col-lg-8 col-lg-offset-2">
+					<h2>about</h2>
+					<p>Born &amp; raised in America, I'm genuinely inspired by industrial minimalism and different cultures. Over six years in business, I have had a chance to work on a variety of projects, with agencies, companies or even individuals. Custom work is my territory, branding, web design, UI/UX design, print design &amp; any offline design.</p>
+					<p>You can find my design work on <a href="#">Dribbble</a> and <a href="#">Behance</a>, random thoughts on <a href="#">Twitter</a> and <a href="#">Medium</a>, beautiful pics on <a href="#">Instagram</a> and almost a full resume on <a href="#">Linkedin</a>. For work inquires please send me an <a href="mailto:hello@persona.com">email</a>.</p>
+				</div>
+			</div>
+
+			<!-- Skills -->
+			<div class="row">
+				<div class="col-xs-12 col-lg-8 col-lg-offset-2">
+
+					<!-- Bar 1 -->
+					<div class="bar-title">Wordpress<span class="align-right">90%</span></div>
+					<div class="bar"><div class="bar-fill" data-percent="90%"></div></div>
+
+					<!-- Bar 2 -->
+					<div class="bar-title">HTML &amp; CSS<span class="align-right">80%</span></div>
+					<div class="bar"><div class="bar-fill" data-percent="80%"></div></div>
+
+					<!-- Bar 3 -->
+					<div class="bar-title">Photoshop<span class="align-right">95%</span></div>
+					<div class="bar"><div class="bar-fill" data-percent="95%"></div></div>
+
+					<!-- Bar 4 -->
+					<div class="bar-title">Javascript<span class="align-right">65%</span></div>
+					<div class="bar"><div class="bar-fill" data-percent="65%"></div></div>
+
+				</div>
+			</div>
+		</section><!-- END About -->
+
+		<!-- Work -->
+		<section id="section2">
+			<!-- Title -->
+			<div class="row padded-top">
+				<div class="col-xs-12 col-lg-8 col-lg-offset-2">
+					<h2>work</h2>
+				</div>
+			</div>
+
+			<div class="row padded-bottom">
+				<!-- Begin Gallery -->
+				<ul class="folio-list">
+
+					<!-- Project 1 -->
+					<li class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2">
+						<a class="lightbox" href="images/portfolio/project1.jpg">
+							<div class="atvImg">
+								<img src="images/portfolio/project1.jpg" alt="portfolio">
+
+								<div class="atvImg-layer" data-img="images/portfolio/project1.jpg"></div>
+							</div>
+						</a>
+					</li>
+
+					<!-- Project 2 -->
+					<li class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0 col-lg-4">
+						<a class="lightbox" href="images/portfolio/project2.jpg">
+							<div class="atvImg">
+								<img src="images/portfolio/project2.jpg" alt="portfolio">
+
+								<div class="atvImg-layer" data-img="images/portfolio/project2.jpg"></div>
+							</div>
+						</a>
+					</li>
+
+					<!-- Project 3 -->
+					<li class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2">
+						<a class="lightbox" href="images/portfolio/project3.jpg">
+							<div class="atvImg">
+								<img src="images/portfolio/project3.jpg" alt="portfolio">
+
+								<div class="atvImg-layer" data-img="images/portfolio/project3.jpg"></div>
+							</div>
+						</a>
+					</li>
+
+					<!-- Project 4 -->
+					<li class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0 col-lg-4">
+						<a class="lightbox" href="images/portfolio/project4.jpg">
+							<div class="atvImg">
+								<img src="images/portfolio/project4.jpg" alt="portfolio">
+
+								<div class="atvImg-layer" data-img="images/portfolio/project4.jpg"></div>
+							</div>
+						</a>
+					</li>
+
+					<!-- Project 5 -->
+					<li class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2">
+						<a class="lightbox" href="images/portfolio/project5.jpg">
+							<div class="atvImg">
+								<img src="images/portfolio/project5.jpg" alt="portfolio">
+
+								<div class="atvImg-layer" data-img="images/portfolio/project5.jpg"></div>
+							</div>
+						</a>
+					</li>
+
+					<!-- Project 6 -->
+					<li class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0 col-lg-4">
+						<a class="lightbox" href="images/portfolio/project6.jpg">
+							<div class="atvImg">
+								<img src="images/portfolio/project6.jpg" alt="portfolio">
+
+								<div class="atvImg-layer" data-img="images/portfolio/project6.jpg"></div>
+							</div>
+						</a>
+					</li>
+				</ul><!-- END Gallery -->
+			</div>
+		</section><!-- END Work -->
+
+		<!-- Experience -->
+		<section id="section3">
+			<!-- Title -->
+			<div class="row">
+				<div class="col-xs-12 col-lg-8 col-lg-offset-2">
+					<h2>experience</h2>
+				</div>
+			</div>
+
+			<!-- Timeline -->
+			<div class="row">
+				<div class="timeline col-xs-12 col-lg-8 col-lg-offset-2">
+					<div class="entry">
+						<div class="time on">Oct 2015 - Present</div>
+						<div class="content"><span class="strong">Anchor</span><br>Co-founder, Front-end Designer</div>
+					</div>
+
+					<div class="entry">
+						<div class="time">Jul 2014 - Oct 2015</div>
+						<div class="content"><span class="strong">European Winter</span><br>CEO &amp; Creative Director</div>
+					</div>
+
+					<div class="entry">
+						<div class="time">Mar 2014 - Jul 2014</div>
+						<div class="content"><span class="strong">Creative Dot</span><br>Senior Visual Designer</div>
+					</div>
+
+					<div class="entry">
+						<div class="time">Feb 2013 - Mar 2014</div>
+						<div class="content"><span class="strong">Playground</span><br>Creative Designer</div>
+					</div>
+
+					<div class="entry">
+						<div class="time">Nov 2011 - Feb 2013</div>
+						<div class="content"><span class="strong">Big Spaceship</span><br>Mid-level Designer</div>
+					</div>
+
+					<div class="entry">
+						<div class="time">Dec 2009 - Nov 2011</div>
+						<div class="content"><span class="strong">Freelance</span></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Button -->
+			<div class="row padded-top">
+				<div class="col-xs-12 col-lg-8 col-lg-offset-2">
+					<a class="button" href="#">Download Resume</a>
+				</div>
+			</div>
+		</section><!-- END Experience -->
+
+		<!-- Clients -->
+		<section id="section4">
+
+			<!-- Title -->
+			<div class="row padded-top">
+				<div class="col-xs-12 col-lg-8 col-lg-offset-2">
+					<h2>clients</h2>
+				</div>
+			</div>
+
+			<!-- Large Text -->
+			<div class="row">
+				<div class="col-xs-12 col-lg-8 col-lg-offset-2">
+					<h1>Had the privilege to work with companies such as <span class="highlight">Airbnb</span>, <span class="highlight">ClassDojo</span>, <span class="highlight">Puma</span>, <span class="highlight">Škoda</span>, <span class="highlight">Twitter</span> &amp; more.</h1>
+					<p>Featured on Behance, The Dieline, Awwwards, siteinspire.com &amp; more.</p>
+				</div>
+			</div>
+
+			<!-- Logos -->
+			<div class="row">
+				<div class="col-xs-12 col-lg-8 col-lg-offset-2">
+					<a class="client" href="#"><img class="has-retina" src="images/client-1.png" alt=""></a>
+					<a class="client" href="#"><img class="has-retina" src="images/client-3.png" alt=""></a>
+					<a class="client" href="#"><img class="has-retina" src="images/client-2.png" alt=""></a>
+					<a class="client" href="#"><img class="has-retina" src="images/client-4.png" alt=""></a>
+				</div>
+			</div>
+
+		</section><!-- END Clients -->
+
+		<!-- Contact -->
+		<section id="section5">
+
+			<!-- Title -->
+			<div class="row padded-top">
+				<div class="col-xs-12 col-lg-8 col-lg-offset-2">
+					<h2>contact</h2>
+				</div>
+			</div>
+
+			<!-- Form -->
+			<div class="row padded-bottom">
+				<div class="col-xs-12 col-lg-8 col-lg-offset-2">
+					<h1><a href="mailto:hello@persona.com">hello@persona.com</a></h1>
+					<p>Or just send me an email straight through here:</p>
+
+					<form id="contact" name="contact" method="post" novalidate="novalidate">
+						<fieldset>
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+							<label for="email">Email</label>
+					        <input type="email" name="email" id="email" />
+					        <label for="message">Message</label>
+					        <textarea name="message" id="message"></textarea>
+					        <input id="submit" type="submit" name="submit" value="Send Email">
+						</fieldset>
+					</form>
+
+					<div id="success">
+						<p>Your message was sent successfully! I will be in touch as soon as I can.</p>
+					</div>
+
+					<div id="error">
+						<p>Something went wrong, try refreshing and submitting the form again.</p>
+					</div>
+				</div>
+			</div>
+
+		</section><!-- END Contact -->
+	</div><!-- END Container -->
+
+	<!-- Footer -->
+	<footer class="padded">
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Social List -->
+			<div class="row">
+				<div class="social-list col-xs-12 col-lg-8 col-lg-offset-2">
+					<a href="#"><i class="social-icon-twitter"></i></a>
+					<a href="#"><i class="social-icon-facebook"></i></a>
+					<a href="#"><i class="social-icon-dribbble"></i></a>
+					<a href="#"><i class="social-icon-behance"></i></a>
+					<a href="#"><i class="social-icon-instagram"></i></a>
+					<a href="#"><i class="social-icon-linkedin"></i></a>
+				</div>
+			</div><!-- END Social List -->
+
+			<!-- Copyright -->
+			<div class="row">
+				<div class="social-list col-xs-12 col-lg-8 col-lg-offset-2">
+					<p class="copyright">© 2016 Persona. All rights reserved.</p>
+				</div>
+			</div><!-- END Copyright -->
+		</div><!-- END Container -->
+	</footer><!-- END Footer -->
+
+	<!-- Javascript -->
+	<script type="text/javascript">
+	function resizeNow() {
+        var browserwidth = $(window).width();
+        var browserheight = $(window).height();
+        $('.pageloader-content').css('right', ((browserwidth - $(".pageloader-content").width()) / 2)).css('top', ((browserheight - $(".pageloader-content").height()) / 2));
+    }
+
+    resizeNow();
+    $(window).resize(resizeNow);
+	</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
